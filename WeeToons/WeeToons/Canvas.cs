@@ -8,5 +8,13 @@ namespace WeeToons
 {
     class Canvas
     {
+        private List<KomikObject> objects;
+
+        public Canvas(List<KomikObject> objects)
+        {
+            this.objects= objects;
+        }
+
+        
     }
 }
