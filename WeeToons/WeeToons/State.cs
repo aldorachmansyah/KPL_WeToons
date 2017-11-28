@@ -6,7 +6,28 @@ using System.Threading.Tasks;
 
 namespace WeeToons
 {
-    class State
+    public abstract class State
     {
+        public State WeState
+        {
+            get
+            {
+                return this.state;
+            }
+        }
+
+        private State state;
+
+        public abstract void Draw(KomikObject obj);
+
+        public virtual void Deselect(KomikObject obj)
+        {
+            //default implementation, no state transition
+        }
+
+        public virtual void Select(KomikObject obj)
+        {
+            //default implementation, no state transition
+        }
     }
 }

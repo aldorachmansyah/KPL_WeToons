@@ -1,1 +1,6 @@
 D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe.config
+D:\Important\Tugas\SM7\KPL\WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csprojResolveAssemblyReference.cache
+D:\Important\Tugas\SM7\KPL\WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.Properties.Resources.resources
+D:\Important\Tugas\SM7\KPL\WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csproj.GenerateResource.Cache
+D:\Important\Tugas\SM7\KPL\WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csproj.CoreCompileInputs.cache
+D:\Important\Tugas\SM7\KPL\WeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe.config
