@@ -1,1 +1,9 @@
 D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe.config
+D:\KPL_WeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe.config
+D:\KPL_WeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe
+D:\KPL_WeToons\WeeToons\WeeToons\bin\Debug\WeeToons.pdb
+D:\KPL_WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csprojResolveAssemblyReference.cache
+D:\KPL_WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.Properties.Resources.resources
+D:\KPL_WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csproj.GenerateResource.Cache
+D:\KPL_WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.exe
+D:\KPL_WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.pdb
