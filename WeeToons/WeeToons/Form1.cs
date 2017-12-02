@@ -16,5 +16,35 @@ namespace WeeToons
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sleepingDogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void beachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void outdoorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripDropDownButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
