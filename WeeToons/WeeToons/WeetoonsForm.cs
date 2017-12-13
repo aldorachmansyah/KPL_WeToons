@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +15,15 @@ namespace WeeToons
 {
     public partial class WeeToonsForm : Form
     {
+        private Point firstPoint = new Point();
+        Image targetImage;
+        int height;
+        int width;
+
         public WeeToonsForm()
         {
             InitializeComponent();
+            
         }
 
         private void onePanelToolStrip_Click(object sender, EventArgs e)
@@ -73,17 +81,22 @@ namespace WeeToons
 
         private void activatePanel(FlowLayoutPanel panel)
         {
-            if(this.activePanel != null)
+            if (this.activePanel != null)
             {
                 this.activePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             }
             panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            panel.Controls.Add(pictureBox1);
+            
+            
             this.activePanel = panel;
+
+
         }
 
         private void removeAllPanel()
         {
-            if(this.panelGroup != null)
+            if (this.panelGroup != null)
             {
                 foreach (FlowLayoutPanel panel in this.panelGroup)
                 {
@@ -146,6 +159,83 @@ namespace WeeToons
                 this.activePanel.BackgroundImage = backgroundImage;
                 this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
             }
+        }
+
+        private void happyBoyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Image imageBox = new Bitmap(@"..\..\..\Resources\Character\boy.png");
+            this.pictureBox1.Image = imageBox;
+           
+            pictureBox1.BackColor = Color.Transparent;
+            
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //something
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            { firstPoint = Control.MousePosition; }
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                Point temp = Control.MousePosition;
+                Point res = new Point(firstPoint.X - temp.X, firstPoint.Y - temp.Y);
+
+                pictureBox1.Location = new Point(pictureBox1.Location.X - res.X, pictureBox1.Location.Y - res.Y);
+
+                firstPoint = temp;
+            }
+        }
+
+        private void shrinkButton_Click(object sender, EventArgs e)
+        {
+            targetImage = pictureBox1.Image;
+            height =  targetImage.Height - 10;
+            width = targetImage.Width - 10;
+            pictureBox1.Image = ResizeNow(width, height);
+        }
+
+        private Bitmap ResizeNow (int target_height, int target_width)
+        {
+            Rectangle dest_rect = new Rectangle(0, 0, target_width, target_height);
+            Bitmap destImage = new Bitmap(target_width, target_height);
+            destImage.SetResolution(targetImage.HorizontalResolution, targetImage.VerticalResolution);
+            using (var g = Graphics.FromImage(destImage))
+            {
+                g.CompositingMode = CompositingMode.SourceCopy;
+                g.CompositingQuality = CompositingQuality.HighQuality;
+                g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                g.SmoothingMode = SmoothingMode.HighQuality;
+                g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+                using (var wrapmode = new ImageAttributes())
+                {
+                    wrapmode.SetWrapMode(WrapMode.TileFlipXY);
+                    g.DrawImage(targetImage, dest_rect, 0, 0, targetImage.Width, targetImage.Height, GraphicsUnit.Pixel, wrapmode);
+                }
+            }
+            return destImage;
+        }
+
+        private void expandButton_Click(object sender, EventArgs e)
+        {
+            targetImage = pictureBox1.Image;
+            height = targetImage.Height + 10;
+            width = targetImage.Width + 10;
+            pictureBox1.Image = ResizeNow(width, height);
         }
     }
 }
