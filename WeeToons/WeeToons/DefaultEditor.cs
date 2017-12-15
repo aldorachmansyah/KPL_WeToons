@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WeeToons
@@ -8,33 +9,38 @@ namespace WeeToons
     {
         private List<ICanvas> canvases;
         private ICanvas selectedCanvas;
-       // private IToolbox toolbox;
 
-       /* public IToolbox Toolbox
-        {
-            get
-            {
-                return this.toolbox;
-            }
+        // private IToolbox toolbox;
 
-            set
-            {
-                this.toolbox = value;
-            }
-        }*/
+        /* public IToolbox Toolbox
+         {
+             get
+             {
+                 return this.toolbox;
+             }
+
+             set
+             {
+                 this.toolbox = value;
+             }
+         }*/
 
         public DefaultEditor()
         {
             Dock = DockStyle.Fill;
             canvases = new List<ICanvas>();
-
+            
         }
 
         public void AddCanvas(ICanvas canvas)
         {
             canvases.Add(canvas);
             this.Controls.Add((Control)canvas);
-            this.selectedCanvas = canvas;
+            SelectCanvas(canvas);
+            foreach (Control c in this.Controls)
+            {
+                c.MouseClick += new MouseEventHandler(CanvasClick);
+            }
         }
 
         public ICanvas GetSelectedCanvas()
@@ -49,13 +55,31 @@ namespace WeeToons
 
         public void RemoveSelectedCanvas()
         {
-            //TabPage selectedTab = this.SelectedTab;
+            this.Controls.Clear();
             
+        }
+
+        private void CanvasClick(object sender, EventArgs e)
+        {
+            ICanvas panel = sender as ICanvas;
+            if (panel != null)
+            {
+                SelectCanvas(panel);
+            }
+          
         }
 
         public void SelectCanvas(ICanvas canvas)
         {
+            if (this.selectedCanvas != null)
+            {
+                this.selectedCanvas.Deactivate();
+            }
+            canvas.Activate();
             this.selectedCanvas = canvas;
         }
+
+        
+
     }
 }

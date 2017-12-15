@@ -34,122 +34,83 @@ namespace WeeToons
         private void InitUI()
         {
             #region Editor and Canvas
-
-
             Debug.WriteLine("Loading canvas...");
             this.editor = new DefaultEditor();
             this.pictureBox1.Controls.Add((Control)this.editor);
-
-
-        
-
-
             #endregion
 
-            #region Toolbar
-
-           /* Debug.WriteLine("Loading toolbar...");
-            this.toolbar = new DefaultToolbar();
-            this.toolStrip1.Controls.Add((Control)this.toolbar);
-
-            ExampleToolbarItem toolItem1 = new ExampleToolbarItem();
-            //toolItem1.SetCommand(whiteCanvasBgCmd);
-            ExampleToolbarItem toolItem2 = new ExampleToolbarItem();
-            //toolItem2.SetCommand(blackCanvasBgCmd);
-
-            this.toolbar.AddToolbarItem(toolItem1);
-            this.toolbar.AddSeparator();
-            this.toolbar.AddToolbarItem(toolItem2);*/
-            #endregion
         }
 
         private void onePanelToolStrip_Click(object sender, EventArgs e)
         {
-            /*removeAllPanel();
-            FlowLayoutPanel newPanel = renderPanel(49, 37, 660, 660, "Full Single Panel");
-            activatePanel(newPanel);*/
-            Canvas canvas1 = new Canvas();
-            canvas1.Name = "Untitled-1";
+            this.editor.RemoveSelectedCanvas();
+            Canvas canvas1 = new Canvas(0, 0, 660, 660);
+            canvas1.Name = "Full Single Panel";
             this.editor.AddCanvas(canvas1);
         }
 
         private void twoPanelToolStrip_Click(object sender, EventArgs e)
         {
-            removeAllPanel();
-            FlowLayoutPanel leftPanel = renderPanel(49, 37, 320, 320, "Left Double Panel");
-            FlowLayoutPanel rightPanel = renderPanel(375, 37, 320, 320, "Right Double Panel");
-            activatePanel(leftPanel);
+            this.editor.RemoveSelectedCanvas();
+            Canvas canvas1 = new Canvas(0, 0, 320, 320);
+            canvas1.Name = "Left Double Panel";
+            this.editor.AddCanvas(canvas1);
+            Canvas canvas2 = new Canvas(330, 0, 320, 320);
+            canvas1.Name = "Right Double Panel";
+            this.editor.AddCanvas(canvas2);
         }
 
         private void threePanelToolStrip_Click(object sender, EventArgs e)
         {
-            removeAllPanel();
-            FlowLayoutPanel leftPanelTop = renderPanel(49, 37, 200, 200, "Top Left Triple Panel");
-            FlowLayoutPanel leftPanelBottom = renderPanel(49, 257, 200, 200, "Bottom Left Triple Panel");
-            FlowLayoutPanel rightPanel = renderPanel(265, 37, 420, 420, "Right Triple Panel");
-            activatePanel(leftPanelTop);
+            this.editor.RemoveSelectedCanvas();
+            Canvas canvas1 = new Canvas(0, 0, 200, 200);
+            canvas1.Name = "Top Left";
+            this.editor.AddCanvas(canvas1);
+            Canvas canvas2 = new Canvas(0, 210, 200, 200);
+            canvas1.Name = "Bottom Left";
+            this.editor.AddCanvas(canvas2);
+            Canvas canvas3 = new Canvas(210, 0, 420, 420);
+            canvas1.Name = "Right";
+            this.editor.AddCanvas(canvas3);
         }
 
         private void fourPanelToolStrip_Click(object sender, EventArgs e)
         {
-            removeAllPanel();
-            FlowLayoutPanel leftTopPanel = renderPanel(49, 37, 320, 320, "Top Left Quartet Panel");
-            FlowLayoutPanel rightTopPanel = renderPanel(375, 37, 320, 320, "Top Right Quartet Panel");
-            FlowLayoutPanel leftBottomPanel = renderPanel(47, 370, 320, 320, "Bottom Left Quartet Panel");
-            FlowLayoutPanel rightBottomPanel = renderPanel(375, 370, 320, 320, "Bottom Right Quartet Panel");
-            activatePanel(leftTopPanel);
+            this.editor.RemoveSelectedCanvas();
+            Canvas canvas1 = new Canvas(0, 0, 320, 320);
+            canvas1.Name = "Top Left";
+            this.editor.AddCanvas(canvas1);
+            Canvas canvas2 = new Canvas(330, 0, 320, 320);
+            canvas1.Name = "Bottom Left";
+            this.editor.AddCanvas(canvas2);
+            Canvas canvas3 = new Canvas(0, 330, 320, 320);
+            canvas1.Name = "Right";
+            this.editor.AddCanvas(canvas3);
+            Canvas canvas4 = new Canvas(330, 330, 320, 320);
+            canvas1.Name = "bottom right";
+            this.editor.AddCanvas(canvas4);
         }
 
-        private FlowLayoutPanel renderPanel(int xPosition, int yPosition, int width, int height, string panelName = "Unknown Panel")
-        {
-            System.Windows.Forms.FlowLayoutPanel panel;
-            panel = new System.Windows.Forms.FlowLayoutPanel();
+       
 
-            panel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel.Location = new System.Drawing.Point(xPosition, yPosition);
-            panel.Name = panelName;
-            panel.Size = new System.Drawing.Size(height, width);
-            panel.TabIndex = 2;
-            panel.Click += new System.EventHandler(this.panel_Click);
-
-            this.Controls.Add(panel);
-            this.panelGroup.Add(panel);
-
-            return panel;
-        }
-
-        private void activatePanel(FlowLayoutPanel panel)
-        {
-            if (this.activePanel != null)
-            {
-                this.activePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            }
-            panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            panel.Controls.Add(pictureBox1);
-            
-            
-            this.activePanel = panel;
-
-
-        }
+       
 
         private void removeAllPanel()
         {
-            if (this.panelGroup != null)
+           /* if (this.panelGroup != null)
             {
                 foreach (FlowLayoutPanel panel in this.panelGroup)
                 {
                     this.Controls.Remove(panel);
                 }
-            }
+            }*/
         }
 
-        private void panel_Click(object sender, EventArgs e)
+        /*private void panel_Click(object sender, EventArgs e)
         {
             FlowLayoutPanel panel = sender as FlowLayoutPanel;
             activatePanel(panel);
-        }
+        }*/
 
         private void parkBackgroundToolStrip_Click(object sender, EventArgs e)
         {

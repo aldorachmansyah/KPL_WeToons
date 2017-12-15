@@ -10,6 +10,8 @@ namespace WeeToons
     public interface ICanvas
     {
         String Name { get; set; }
+        void Activate();
+        void Deactivate();
         /*ITool GetActiveTool();
         void SetActiveTool(ITool tool);
         void Repaint();
