@@ -89,6 +89,12 @@ namespace WeeToons
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         }
 
+        public void SetBackground(Image image)
+        {
+            this.BackgroundImage = image;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
         /* public void AddDrawingObject(KomikObject drawingObject)
          {
              throw new NotImplementedException();

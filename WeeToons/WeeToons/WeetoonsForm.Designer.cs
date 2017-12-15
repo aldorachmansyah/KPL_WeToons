@@ -534,7 +534,6 @@ namespace WeeToons
         private System.Windows.Forms.ToolStripMenuItem deskToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem computerToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripDropDownButton5;
-        private System.Windows.Forms.FlowLayoutPanel activePanel;
         private List<System.Windows.Forms.FlowLayoutPanel> panelGroup = new List<System.Windows.Forms.FlowLayoutPanel>();
         private System.Windows.Forms.ToolStripMenuItem fourPanelToolStrip;
         private System.Windows.Forms.PictureBox pictureBox1;

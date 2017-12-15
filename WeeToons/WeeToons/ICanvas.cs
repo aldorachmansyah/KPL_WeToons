@@ -12,6 +12,7 @@ namespace WeeToons
         String Name { get; set; }
         void Activate();
         void Deactivate();
+        void SetBackground(Image image);
         /*ITool GetActiveTool();
         void SetActiveTool(ITool tool);
         void Repaint();

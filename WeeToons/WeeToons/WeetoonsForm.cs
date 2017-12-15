@@ -91,74 +91,53 @@ namespace WeeToons
             this.editor.AddCanvas(canvas4);
         }
 
-       
-
-       
-
-        private void removeAllPanel()
-        {
-           /* if (this.panelGroup != null)
-            {
-                foreach (FlowLayoutPanel panel in this.panelGroup)
-                {
-                    this.Controls.Remove(panel);
-                }
-            }*/
-        }
-
-        /*private void panel_Click(object sender, EventArgs e)
-        {
-            FlowLayoutPanel panel = sender as FlowLayoutPanel;
-            activatePanel(panel);
-        }*/
-
         private void parkBackgroundToolStrip_Click(object sender, EventArgs e)
         {
-            if (this.activePanel != null)
+            if (this.editor.GetSelectedCanvas() != null)
             {
                 Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\park.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
+                ICanvas canvas = this.editor.GetSelectedCanvas();
+                canvas.SetBackground(backgroundImage);
             }
         }
 
         private void beachToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.activePanel != null)
+            if (this.editor.GetSelectedCanvas() != null)
             {
                 Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\beach.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
+                ICanvas canvas = this.editor.GetSelectedCanvas();
+                canvas.SetBackground(backgroundImage);
             }
         }
 
         private void classroomBackgroundToolStrip_Click(object sender, EventArgs e)
         {
-            if (this.activePanel != null)
+            if (this.editor.GetSelectedCanvas() != null)
             {
                 Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\classroom.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
+                ICanvas canvas = this.editor.GetSelectedCanvas();
+                canvas.SetBackground(backgroundImage);
             }
         }
 
         private void bedroomBackgroundToolStrip_Click(object sender, EventArgs e)
         {
-            if (this.activePanel != null)
+            if (this.editor.GetSelectedCanvas() != null)
             {
                 Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\bedroom.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
+                ICanvas canvas = this.editor.GetSelectedCanvas();
+                canvas.SetBackground(backgroundImage);
             }
         }
 
         private void kitchenBackgroundToolStrip_Click(object sender, EventArgs e)
         {
-            if (this.activePanel != null)
+            if (this.editor.GetSelectedCanvas() != null)
             {
                 Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\kitchen.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
+                ICanvas canvas = this.editor.GetSelectedCanvas();
+                canvas.SetBackground(backgroundImage);
             }
         }
 
