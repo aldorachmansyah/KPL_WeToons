@@ -158,7 +158,7 @@ namespace WeeToons
             this.bedroomBackgroundToolStrip,
             this.kitchenBackgroundToolStrip});
             this.indoorBackgroundToolstrip.Name = "indoorBackgroundToolstrip";
-            this.indoorBackgroundToolstrip.Size = new System.Drawing.Size(119, 22);
+            this.indoorBackgroundToolstrip.Size = new System.Drawing.Size(152, 22);
             this.indoorBackgroundToolstrip.Text = "Indoor";
             // 
             // classroomBackgroundToolStrip
@@ -188,7 +188,7 @@ namespace WeeToons
             this.parkBackgroundToolStrip,
             this.beachBackgroundToolStrip});
             this.outdoorBackgroundToolstrip.Name = "outdoorBackgroundToolstrip";
-            this.outdoorBackgroundToolstrip.Size = new System.Drawing.Size(119, 22);
+            this.outdoorBackgroundToolstrip.Size = new System.Drawing.Size(152, 22);
             this.outdoorBackgroundToolstrip.Text = "Outdoor";
             // 
             // parkBackgroundToolStrip

@@ -19,18 +19,58 @@ namespace WeeToons
         Image targetImage;
         int height;
         int width;
+      //  private IToolbox toolbox;
+        private IEditor editor;
+        //private IToolbar toolbar;
+        //private IMenubar menubar;
 
         public WeeToonsForm()
         {
             InitializeComponent();
+            InitUI();
             
+        }
+
+        private void InitUI()
+        {
+            #region Editor and Canvas
+
+
+            Debug.WriteLine("Loading canvas...");
+            this.editor = new DefaultEditor();
+            this.pictureBox1.Controls.Add((Control)this.editor);
+
+
+        
+
+
+            #endregion
+
+            #region Toolbar
+
+           /* Debug.WriteLine("Loading toolbar...");
+            this.toolbar = new DefaultToolbar();
+            this.toolStrip1.Controls.Add((Control)this.toolbar);
+
+            ExampleToolbarItem toolItem1 = new ExampleToolbarItem();
+            //toolItem1.SetCommand(whiteCanvasBgCmd);
+            ExampleToolbarItem toolItem2 = new ExampleToolbarItem();
+            //toolItem2.SetCommand(blackCanvasBgCmd);
+
+            this.toolbar.AddToolbarItem(toolItem1);
+            this.toolbar.AddSeparator();
+            this.toolbar.AddToolbarItem(toolItem2);*/
+            #endregion
         }
 
         private void onePanelToolStrip_Click(object sender, EventArgs e)
         {
-            removeAllPanel();
+            /*removeAllPanel();
             FlowLayoutPanel newPanel = renderPanel(49, 37, 660, 660, "Full Single Panel");
-            activatePanel(newPanel);
+            activatePanel(newPanel);*/
+            Canvas canvas1 = new Canvas();
+            canvas1.Name = "Untitled-1";
+            this.editor.AddCanvas(canvas1);
         }
 
         private void twoPanelToolStrip_Click(object sender, EventArgs e)
