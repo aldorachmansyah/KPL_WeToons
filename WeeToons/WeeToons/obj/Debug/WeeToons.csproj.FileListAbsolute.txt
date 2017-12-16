@@ -1,4 +1,5 @@
 D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe.config
+<<<<<<< HEAD
 D:\KPL_WeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe.config
 D:\KPL_WeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe
 D:\KPL_WeToons\WeeToons\WeeToons\bin\Debug\WeeToons.pdb
@@ -7,3 +8,23 @@ D:\KPL_WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.Properties.Resources.resourc
 D:\KPL_WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csproj.GenerateResource.Cache
 D:\KPL_WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.exe
 D:\KPL_WeToons\WeeToons\WeeToons\obj\Debug\WeeToons.pdb
+=======
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe.config
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\bin\Debug\WeeToons.pdb
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csprojResolveAssemblyReference.cache
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.Form1.resources
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.Properties.Resources.resources
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csproj.GenerateResource.Cache
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csproj.CoreCompileInputs.cache
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.exe
+E:\ITS\SEMESTER7\Konstruksi Perangkat Lunak\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.pdb
+D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.exe
+D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.pdb
+D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\bin\Debug\WeeToons.exe
+D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\bin\Debug\WeeToons.pdb
+D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csprojResolveAssemblyReference.cache
+D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.WeeToonsForm.resources
+D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.Properties.Resources.resources
+D:\Sekolah\Semester 7\KPL\WeeToons\WeeToons\WeeToons\obj\Debug\WeeToons.csproj.GenerateResource.Cache
+>>>>>>> 18917cbe6ec78c8667c6e6988e59dd77eb4d5a73
