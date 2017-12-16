@@ -5,8 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WeeToons
-{
-    class StaticState
+{ 
+    public class StaticState : State
     {
+        /*private static State instance;
+
+        private static State GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new StaticState();
+            }
+            return instance;
+        }
+
+        public override void Draw(KomikObject obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Select(KomikObject obj)
+        {
+            obj.ChangeState(ActiveState.GetInstance());
+        }*/
     }
 }
