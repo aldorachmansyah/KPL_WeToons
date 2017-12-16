@@ -47,7 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveState.cs" />
-    <Compile Include="Canvas.cs" />
+    <Compile Include="Canvas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ICanvas.cs" />
+    <Compile Include="IEditor.cs" />
     <Compile Include="WeetoonsForm.cs">
       <SubType>Form</SubType>
     </Compile>
