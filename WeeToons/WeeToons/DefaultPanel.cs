@@ -46,6 +46,7 @@ namespace WeeToons
         {
             this.comicObjects = new List<KomikObject>();
             this.selectionTool = new SelectionTool();
+            this.DoubleBuffered = true;
 
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BorderStyle = BorderStyle.FixedSingle;
@@ -136,7 +137,6 @@ namespace WeeToons
         {
             foreach (KomikObject obj in comicObjects)
             {
-                Debug.WriteLine(obj);
                 obj.SetGraphics(e.Graphics);
                 obj.Draw();
             }
@@ -148,7 +148,6 @@ namespace WeeToons
             {
                 if (obj.Intersect(x, y))
                 {
-                    Debug.Write(obj);
                     return obj;
                 }
             }

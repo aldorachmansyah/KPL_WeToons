@@ -6,11 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
-using WeeToons.KomikObjects;
 
-namespace WeeToons.Tools.Character_Tools
+namespace WeeToons.Tools.Background_Tools
 {
-    class StudentCharacter : ToolStripMenuItem, ITool
+    class BeachBackground : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
 
@@ -27,21 +26,21 @@ namespace WeeToons.Tools.Character_Tools
             }
         }
 
-        public StudentCharacter()
+        public BeachBackground()
         {
-            this.Text = "Student";
-            this.Name = "studentCharacterToolStrip";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Character\student.png");
+            this.Text = "Beach";
+            this.Name = "beachBackgroundToolStrip";
             this.Click += new EventHandler(this.tool_Click);
+            this.Image = new Bitmap(@"..\..\..\Resources\Background\beach.jpg");
         }
 
         public void tool_Click(object sender, EventArgs e)
         {
-            IPanel panel = this.panelContainer.ActivePanel;
-            if(panel != null)
+            IPanel activePanel = this.panelContainer.ActivePanel;
+            if (activePanel != null)
             {
-                StudentProperty student = new StudentProperty();
-                panel.AddComicObject((KomikObject)student);
+                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\beach.jpg");
+                activePanel.SetBackground(backgroundImage);
             }
         }
     }

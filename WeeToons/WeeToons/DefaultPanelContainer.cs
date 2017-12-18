@@ -32,11 +32,11 @@ namespace WeeToons
             this.panels = new List<IPanel>();
 
             this.Location = new System.Drawing.Point(110, 37);
-            this.Name = "WeeToons";
+            this.Name = "WeeToonsPanels";
             this.Size = new System.Drawing.Size(660, 660);
             this.TabIndex = 2;
             this.TabStop = false;
-            this.Text = "Default Panel";
+            this.Text = "WEETOONS - Please select a panel layout to start";
         }
 
         public void AddPanel(IPanel panel)
@@ -45,7 +45,7 @@ namespace WeeToons
 
             this.Controls.Add(newPanel);
             this.panels.Add(panel);
-            Debug.WriteLine("masuk");
+            newPanel.Click += this.panel_Click;
         }
 
         public void SetActivePanel(IPanel panel)

@@ -32,6 +32,7 @@ namespace WeeToons.Tools.Background_Tools
             this.Name = "parkBackgroundToolStrip";
             this.Image = Bitmap.FromFile(@"..\..\..\Resources\Background\park.jpg");
             this.Click += new EventHandler(this.tool_Click);
+            this.Image = new Bitmap(@"..\..\..\Resources\Background\park.jpg");
         }
 
         public void tool_Click(object sender, EventArgs e)

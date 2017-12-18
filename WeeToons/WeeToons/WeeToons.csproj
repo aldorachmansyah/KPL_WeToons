@@ -62,6 +62,7 @@
     <Compile Include="Interfaces\IPanelContainer.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IToolGroup.cs" />
+<<<<<<< HEAD
     <Compile Include="KomikObjects\ChairProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
     <Compile Include="KomikObjects\TreeProperty.cs" />
@@ -71,10 +72,57 @@
     <Compile Include="Tools\Property Tools\PropertyTool.cs">
       <SubType>Component</SubType>
     </Compile>
+=======
+    <Compile Include="KomikObjects\BasketProperty.cs" />
+    <Compile Include="KomikObjects\ChefProperty.cs" />
+    <Compile Include="KomikObjects\DoctorProperty.cs" />
+    <Compile Include="KomikObjects\GrandfatherProperty.cs" />
+    <Compile Include="KomikObjects\LeftBoxProperty.cs" />
+    <Compile Include="KomikObjects\LeftRoundProperty.cs" />
+    <Compile Include="KomikObjects\RightBoxProperty.cs" />
+    <Compile Include="KomikObjects\StudentProperty.cs" />
+    <Compile Include="KomikObjects\SwimmerProperty.cs" />
+>>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
     <Compile Include="Tools\Background Tools\BackgroundTool.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Background Tools\BeachBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Background Tools\BedroomBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Background Tools\ClassroomBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Background Tools\KitchenBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Background Tools\ParkBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Bubble Tools\BubbleTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Bubble Tools\LeftBoxBubble.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Bubble Tools\LeftRoundBubble.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Bubble Tools\RightBoxBubble.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\BasketCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\ChefCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\DoctorCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\GrandfatherCharacter.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Character Tools\StudentCharacter.cs">
@@ -83,13 +131,26 @@
     <Compile Include="Tools\Character Tools\CharacterTool.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Panel Tools\FourPanelLayout.cs">
+	  <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\SwimmerCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Panel Tools\OnePanelLayout.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\PanelTool.cs">
       <SubType>Component</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Tools\Property Tools\Tree.cs">
+=======
+    <Compile Include="Tools\Panel Tools\ThreePanelLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Panel Tools\TwoPanelLayout.cs">
+>>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Selection Tools\SelectionTool.cs" />
@@ -135,9 +196,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Tools\Panel Tools\park.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

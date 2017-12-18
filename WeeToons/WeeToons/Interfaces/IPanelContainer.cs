@@ -7,6 +7,7 @@ namespace WeeToons
     public interface IPanelContainer
     {
         IPanel ActivePanel { get; set; }
+        String Text { get; set; }
 
         void SetActivePanel(IPanel panel);
         void AddPanel(IPanel panel);

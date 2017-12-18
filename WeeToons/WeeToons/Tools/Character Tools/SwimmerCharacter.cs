@@ -10,9 +10,10 @@ using WeeToons.KomikObjects;
 
 namespace WeeToons.Tools.Character_Tools
 {
-    class StudentCharacter : ToolStripMenuItem, ITool
+    class SwimmerCharacter : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
+        private KomikObject swimmer;
 
         public IPanelContainer PanelContainer
         {
@@ -27,21 +28,21 @@ namespace WeeToons.Tools.Character_Tools
             }
         }
 
-        public StudentCharacter()
+        public SwimmerCharacter()
         {
-            this.Text = "Student";
-            this.Name = "studentCharacterToolStrip";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Character\student.png");
+            this.Text = "Swimmer";
+            this.Name = "swimmerCharacterToolStrip";
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Character\swimmer.png");
             this.Click += new EventHandler(this.tool_Click);
         }
 
         public void tool_Click(object sender, EventArgs e)
         {
             IPanel panel = this.panelContainer.ActivePanel;
-            if(panel != null)
+            if (panel != null)
             {
-                StudentProperty student = new StudentProperty();
-                panel.AddComicObject((KomikObject)student);
+                SwimmerProperty swimmer = new SwimmerProperty();
+                panel.AddComicObject((KomikObject)swimmer);
             }
         }
     }

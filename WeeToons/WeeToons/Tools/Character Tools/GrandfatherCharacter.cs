@@ -10,7 +10,7 @@ using WeeToons.KomikObjects;
 
 namespace WeeToons.Tools.Character_Tools
 {
-    class StudentCharacter : ToolStripMenuItem, ITool
+    class GrandfatherCharacter : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
 
@@ -27,21 +27,21 @@ namespace WeeToons.Tools.Character_Tools
             }
         }
 
-        public StudentCharacter()
+        public GrandfatherCharacter()
         {
-            this.Text = "Student";
-            this.Name = "studentCharacterToolStrip";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Character\student.png");
+            this.Text = "Grandfather";
+            this.Name = "grandfatherCharacterToolStrip";
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Character\grandfather.png");
             this.Click += new EventHandler(this.tool_Click);
         }
 
         public void tool_Click(object sender, EventArgs e)
         {
             IPanel panel = this.panelContainer.ActivePanel;
-            if(panel != null)
+            if (panel != null)
             {
-                StudentProperty student = new StudentProperty();
-                panel.AddComicObject((KomikObject)student);
+                GrandfatherProperty grandfather = new GrandfatherProperty();
+                panel.AddComicObject((KomikObject)grandfather);
             }
         }
     }
