@@ -75,6 +75,8 @@ namespace WeeToons
             ITool leftboxBubble = new LeftBoxBubble();
             ITool rightboxBubble = new RightBoxBubble();
 
+            ITool textForm = new Text();
+
             onePanelLayout.PanelContainer = this.panelGroupContainer;
             twoPanelLayout.PanelContainer = this.panelGroupContainer;
             threePanelLayout.PanelContainer = this.panelGroupContainer;
@@ -103,6 +105,8 @@ namespace WeeToons
             leftboxBubble.PanelContainer = this.panelGroupContainer;
             rightboxBubble.PanelContainer = this.panelGroupContainer;
 
+            textForm.PanelContainer = this.panelGroupContainer;
+
 
             panelTool.AddTool(onePanelLayout);
             panelTool.AddTool(twoPanelLayout);
@@ -130,6 +134,8 @@ namespace WeeToons
             bubbleTool.AddTool(leftroundBubble);
             bubbleTool.AddTool(leftboxBubble);
             bubbleTool.AddTool(rightboxBubble);
+
+            textTool.AddTool(textForm);
 
             #endregion
         }
