@@ -62,6 +62,7 @@
     <Compile Include="Interfaces\IPanelContainer.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IToolGroup.cs" />
+    <Compile Include="KomikObjects\BasketProperty.cs" />
     <Compile Include="KomikObjects\ChefProperty.cs" />
     <Compile Include="KomikObjects\DoctorProperty.cs" />
     <Compile Include="KomikObjects\GrandfatherProperty.cs" />
@@ -71,6 +72,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Background Tools\ParkBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\BasketCharacter.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Character Tools\ChefCharacter.cs">
