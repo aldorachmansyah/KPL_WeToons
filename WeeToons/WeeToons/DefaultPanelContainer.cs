@@ -31,7 +31,7 @@ namespace WeeToons
         {
             this.panels = new List<IPanel>();
 
-            this.Location = new System.Drawing.Point(49, 37);
+            this.Location = new System.Drawing.Point(110, 37);
             this.Name = "WeeToons";
             this.Size = new System.Drawing.Size(660, 660);
             this.TabIndex = 2;

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
+using WeeToons.Tools.Selection_Tools;
 
 namespace WeeToons
 {
@@ -33,6 +34,8 @@ namespace WeeToons
         {
             this.panelContainer.RemoveAllPanel();
             IPanel newPanel = new DefaultPanel(10, 20, 630, 630, "Full Single Panel");
+            newPanel.SelectionTool = new SelectionTool();
+            newPanel.SelectionTool.PanelContainer = this.panelContainer;
             this.panelContainer.AddPanel(newPanel);
             this.panelContainer.SetActivePanel(newPanel);
         }
