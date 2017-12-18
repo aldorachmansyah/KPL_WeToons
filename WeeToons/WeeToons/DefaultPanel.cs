@@ -62,6 +62,7 @@ namespace WeeToons
             this.KeyDown += Canvas_KeyDown;
             this.KeyUp += Canvas_KeyUp;
             this.PreviewKeyDown += Canvas_PreviewKeyDown;
+            
 
         }
 
@@ -98,11 +99,35 @@ namespace WeeToons
 
         private void Canvas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+
+            if (Form.ModifierKeys == Keys.Control)
+            {
+                List<KomikObject> removeTemp = new List<KomikObject>();
+                List<KomikObject> addTemp = new List<KomikObject>();
+
+                ObjectGroup grouping = new ObjectGroup();
+                foreach (KomikObject obj in comicObjects.ToList())
+                {
+                    State stateTemp = obj.WeState;
+
+                    if (stateTemp as EditingState != null)
+                    {
+                        grouping.Add(obj);
+                        this.comicObjects.Remove(obj);
+                        this.comicObjects.Add(grouping);
+                    }
+                }
+
+            }
+           
         }
 
         private void Canvas_KeyDown(object sender, KeyEventArgs e)
         {
+
+          
             
+                
         }
 
         private void Canvas_MouseMove(object sender, MouseEventArgs e)

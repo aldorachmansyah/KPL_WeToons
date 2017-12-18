@@ -53,9 +53,7 @@ namespace WeeToons.Tools.Selection_Tools
                     panel.DeselectAllObjects();
                 }
                 selectedObject = panel.SelectObjectAt(e.X, e.Y);
-
             }
-
         }
 
 

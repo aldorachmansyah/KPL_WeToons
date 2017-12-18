@@ -21,6 +21,10 @@ namespace WeeToons
         {
             InitializeComponent();
             InitUI();
+            this.BringToFront();
+            this.Focus();
+            this.KeyPreview = true;
+
         }
 
         public void InitUI()

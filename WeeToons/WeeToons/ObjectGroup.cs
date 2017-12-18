@@ -15,6 +15,11 @@ namespace WeeToons
             this.objects = new List<KomikObject>();
         }
 
+        public void Add(KomikObject obj)
+        {
+            this.objects.Add(obj);
+        }
+
         public override void Draw()
         {
             foreach(KomikObject obj in objects)
