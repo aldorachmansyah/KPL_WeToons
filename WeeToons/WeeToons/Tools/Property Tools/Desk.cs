@@ -10,7 +10,7 @@ using WeeToons.KomikObjects;
 
 namespace WeeToons.Tools.Property_Tools
 {
-    class Chair : ToolStripMenuItem, ITool
+    class Desk : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
 
@@ -27,11 +27,11 @@ namespace WeeToons.Tools.Property_Tools
             }
         }
 
-        public Chair()
+        public Desk()
         {
             this.Text = "Desk";
             this.Name = "deskToolStrip";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Property\chair.png");
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Property\desk.png");
             this.Click += new EventHandler(this.tool_Click);
         }
 
@@ -40,8 +40,8 @@ namespace WeeToons.Tools.Property_Tools
             IPanel panel = this.panelContainer.ActivePanel;
             if (panel != null)
             {
-                ChairProperty chair = new ChairProperty();
-                panel.AddComicObject((KomikObject)chair);
+                DeskProperty desk = new DeskProperty();
+                panel.AddComicObject((KomikObject)desk);
             }
         }
     }

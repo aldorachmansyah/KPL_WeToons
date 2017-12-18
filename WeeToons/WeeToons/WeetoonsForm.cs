@@ -5,11 +5,8 @@ using System.Windows.Forms;
 using WeeToons.Interfaces;
 using WeeToons.Tools;
 using WeeToons.Tools.Background_Tools;
-<<<<<<< HEAD
 using WeeToons.Tools.Property_Tools;
-=======
 using WeeToons.Tools.Bubble_Tools;
->>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
 using WeeToons.Tools.Character_Tools;
 using WeeToons.Tools.Panel_Tools;
 
@@ -37,20 +34,14 @@ namespace WeeToons
             IToolGroup panelTool = new PanelTool();
             IToolGroup backgroundTool = new BackgroundTool();
             IToolGroup characterTool = new CharacterTool();
-<<<<<<< HEAD
             IToolGroup propertyTool = new PropertyTool();
-=======
             IToolGroup bubbleTool = new BubbleTool();
->>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
 
             this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
             this.topToolStrip.Items.Add((ToolStripDropDownButton)backgroundTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)characterTool);
-<<<<<<< HEAD
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)propertyTool);
-=======
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)bubbleTool);
->>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
             #endregion
 
             #region TOOLS
@@ -64,11 +55,11 @@ namespace WeeToons
             ITool kitchenBackground = new KitchenBackground();
             ITool bedroomBackground = new BedroomBackground();
             ITool studentCharacter = new StudentCharacter();
-<<<<<<< HEAD
+
             ITool chair = new Chair();
             ITool tree = new Tree();
+            ITool desk = new Desk();
 
-=======
             ITool swimmerCharacter = new SwimmerCharacter();
             ITool chefCharacter = new ChefCharacter();
             ITool doctorCharacter = new DoctorCharacter();
@@ -77,7 +68,6 @@ namespace WeeToons
             ITool leftroundBubble = new LeftRoundBubble();
             ITool leftboxBubble = new LeftBoxBubble();
             ITool rightboxBubble = new RightBoxBubble();
->>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
             twoPanelLayout.PanelContainer = this.panelGroupContainer;
@@ -89,10 +79,11 @@ namespace WeeToons
             kitchenBackground.PanelContainer = this.panelGroupContainer;
             bedroomBackground.PanelContainer = this.panelGroupContainer;
             studentCharacter.PanelContainer = this.panelGroupContainer;
-<<<<<<< HEAD
+
             chair.PanelContainer = this.panelGroupContainer;
             tree.PanelContainer = this.panelGroupContainer;
-=======
+            desk.PanelContainer = this.panelGroupContainer;
+
             swimmerCharacter.PanelContainer = this.panelGroupContainer;
             chefCharacter.PanelContainer = this.panelGroupContainer;
             doctorCharacter.PanelContainer = this.panelGroupContainer;
@@ -101,7 +92,7 @@ namespace WeeToons
             leftroundBubble.PanelContainer = this.panelGroupContainer;
             leftboxBubble.PanelContainer = this.panelGroupContainer;
             rightboxBubble.PanelContainer = this.panelGroupContainer;
->>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
+
 
             panelTool.AddTool(onePanelLayout);
             panelTool.AddTool(twoPanelLayout);
@@ -113,10 +104,11 @@ namespace WeeToons
             backgroundTool.AddTool(kitchenBackground);
             backgroundTool.AddTool(bedroomBackground);
             characterTool.AddTool(studentCharacter);
-<<<<<<< HEAD
+
             propertyTool.AddTool(chair);
             propertyTool.AddTool(tree);
-=======
+            propertyTool.AddTool(desk);
+
             characterTool.AddTool(swimmerCharacter);
             characterTool.AddTool(chefCharacter);
             characterTool.AddTool(doctorCharacter);
@@ -125,7 +117,7 @@ namespace WeeToons
             bubbleTool.AddTool(leftroundBubble);
             bubbleTool.AddTool(leftboxBubble);
             bubbleTool.AddTool(rightboxBubble);
->>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
+
             #endregion
         }
         

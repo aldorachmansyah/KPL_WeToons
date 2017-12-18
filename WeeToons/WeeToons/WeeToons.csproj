@@ -62,17 +62,19 @@
     <Compile Include="Interfaces\IPanelContainer.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IToolGroup.cs" />
-<<<<<<< HEAD
     <Compile Include="KomikObjects\ChairProperty.cs" />
+    <Compile Include="KomikObjects\DeskProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
     <Compile Include="KomikObjects\TreeProperty.cs" />
     <Compile Include="Tools\Property Tools\Chair.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Property Tools\Desk.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Property Tools\PropertyTool.cs">
       <SubType>Component</SubType>
     </Compile>
-=======
     <Compile Include="KomikObjects\BasketProperty.cs" />
     <Compile Include="KomikObjects\ChefProperty.cs" />
     <Compile Include="KomikObjects\DoctorProperty.cs" />
@@ -80,9 +82,7 @@
     <Compile Include="KomikObjects\LeftBoxProperty.cs" />
     <Compile Include="KomikObjects\LeftRoundProperty.cs" />
     <Compile Include="KomikObjects\RightBoxProperty.cs" />
-    <Compile Include="KomikObjects\StudentProperty.cs" />
     <Compile Include="KomikObjects\SwimmerProperty.cs" />
->>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
     <Compile Include="Tools\Background Tools\BackgroundTool.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -132,7 +132,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\FourPanelLayout.cs">
-	  <SubType>Component</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Character Tools\SwimmerCharacter.cs">
       <SubType>Component</SubType>
@@ -143,14 +143,13 @@
     <Compile Include="Tools\Panel Tools\PanelTool.cs">
       <SubType>Component</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Tools\Property Tools\Tree.cs">
-=======
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Panel Tools\ThreePanelLayout.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\TwoPanelLayout.cs">
->>>>>>> 6e9ee3ab3e02042165384078316751f07bb72b8e
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Selection Tools\SelectionTool.cs" />
