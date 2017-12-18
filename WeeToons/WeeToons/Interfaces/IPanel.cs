@@ -18,5 +18,8 @@ namespace WeeToons.Interfaces
         void ChangeBorder(BorderStyle borderStyle);
         void SetBackground(Image backgroundImage);
         void Repaint();
+
+        void DeselectAllObjects();
+
     }
 }

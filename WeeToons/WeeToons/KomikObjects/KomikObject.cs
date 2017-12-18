@@ -18,6 +18,31 @@ namespace WeeToons
         public int Height { get; set; }
 
 
+        public KomikObject()
+        {
+            this.ChangeState(StaticState.GetInstance());
+        }
+
+        public State WeState
+        {
+            get
+            {
+                return this.state;
+            }
+        }
+
+        private State state;
+
+        public void Select()
+        {
+            this.state.Select(this);
+        }
+
+        public void Deselect()
+        {
+            this.state.Deselect(this);
+        }
+
         public virtual bool Intersect(int xTest, int yTest)
         {
             if ((xTest >= X && xTest <= X + Width) && (yTest >= Y && yTest <= Y + Height))
@@ -34,6 +59,9 @@ namespace WeeToons
         }
         public virtual void RenderOnEditingView()
         {
+            Image imageBox = Bitmap.FromFile(this.PropertyPath);
+            GetGraphics().DrawImage(imageBox, this.X, this.Y, this.Width, this.Height);
+            GetGraphics().DrawRectangle(new Pen(Brushes.Red, 5), new Rectangle(this.X, this.Y, this.Width, this.Height));
 
         }
         public virtual void RenderOnStaticView()
@@ -45,7 +73,7 @@ namespace WeeToons
 
         public virtual void Draw()
         {
-            this.RenderOnStaticView();
+            this.state.Draw(this);
         }
         public virtual void SetGraphics(Graphics graphics)
         {
@@ -57,5 +85,9 @@ namespace WeeToons
             return this.graphics;
         }
 
+        public void ChangeState(State state)
+        {
+            this.state = state;
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace WeeToons.Tools.Selection_Tools
             IPanel panel = this.panelContainer.ActivePanel;
             if (e.Button == MouseButtons.Left && panel != null)
             {
-                //canvas.DeselectAllObjects();
+                panel.DeselectAllObjects();
                 selectedObject = panel.SelectObjectAt(e.X, e.Y);
             }
 

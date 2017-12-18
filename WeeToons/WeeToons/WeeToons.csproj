@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActiveState.cs" />
     <Compile Include="Canvas.cs" />
     <Compile Include="DefaultPanel.cs">
       <SubType>Component</SubType>
@@ -113,7 +112,7 @@
     </Compile>
     <Compile Include="KomikObjects\KomikObject.cs" />
     <Compile Include="ObjectGroup.cs" />
-    <Compile Include="PreviewState.cs" />
+    <Compile Include="EditingState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property.cs" />

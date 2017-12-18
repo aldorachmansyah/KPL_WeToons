@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace WeeToons
 {
-    public class PreviewState : State
+    public class EditingState : State
     {
-       /* private static State instance;
+        private static State instance;
 
-        private static State GetInstance()
+        public static State GetInstance()
         {
             if (instance == null)
             {
-                instance = new PreviewState();
+                instance = new EditingState();
             }
             return instance;
         }
 
         public override void Draw(KomikObject obj)
         {
-            throw new NotImplementedException();
+            obj.RenderOnEditingView();
         }
 
-        public override void Select(KomikObject obj)
+        public override void Deselect(KomikObject obj)
         {
-            obj.ChangeState(ActiveState.GetInstance());
+            obj.ChangeState(StaticState.GetInstance());
         }
-        */
+
     }
 }

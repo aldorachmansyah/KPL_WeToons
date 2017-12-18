@@ -159,12 +159,20 @@ namespace WeeToons
         public KomikObject SelectObjectAt(int x, int y)
         {
             KomikObject obj = GetObjectAt(x, y);
-            /*if (obj != null)
+            if (obj != null)
             {
                 obj.Select();
-            }*/
+            }
 
             return obj;
+        }
+
+        public void DeselectAllObjects()
+        {
+            foreach (KomikObject drawObj in comicObjects)
+            {
+                drawObj.Deselect();
+            }
         }
     }
 }

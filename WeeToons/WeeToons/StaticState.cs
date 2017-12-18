@@ -8,9 +8,9 @@ namespace WeeToons
 { 
     public class StaticState : State
     {
-        /*private static State instance;
+        private static State instance;
 
-        private static State GetInstance()
+        public static State GetInstance()
         {
             if (instance == null)
             {
@@ -21,12 +21,12 @@ namespace WeeToons
 
         public override void Draw(KomikObject obj)
         {
-            throw new NotImplementedException();
+            obj.RenderOnStaticView();
         }
 
         public override void Select(KomikObject obj)
         {
-            obj.ChangeState(ActiveState.GetInstance());
-        }*/
+            obj.ChangeState(EditingState.GetInstance());
+        }
     }
 }
