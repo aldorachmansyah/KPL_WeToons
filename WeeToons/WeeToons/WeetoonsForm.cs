@@ -45,6 +45,7 @@ namespace WeeToons
             ITool swimmerCharacter = new SwimmerCharacter();
             ITool chefCharacter = new ChefCharacter();
             ITool doctorCharacter = new DoctorCharacter();
+            ITool grandfatherCharacter = new GrandfatherCharacter();
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
             parkBackground.PanelContainer = this.panelGroupContainer;
@@ -52,6 +53,7 @@ namespace WeeToons
             swimmerCharacter.PanelContainer = this.panelGroupContainer;
             chefCharacter.PanelContainer = this.panelGroupContainer;
             doctorCharacter.PanelContainer = this.panelGroupContainer;
+            grandfatherCharacter.PanelContainer = this.panelGroupContainer;
 
             panelTool.AddTool(onePanelLayout);
             backgroundTool.AddTool(parkBackground);
@@ -59,6 +61,7 @@ namespace WeeToons
             characterTool.AddTool(swimmerCharacter);
             characterTool.AddTool(chefCharacter);
             characterTool.AddTool(doctorCharacter);
+            characterTool.AddTool(grandfatherCharacter);
             #endregion
         }
 
