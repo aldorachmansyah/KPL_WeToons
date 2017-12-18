@@ -43,6 +43,7 @@ namespace WeeToons
             ITool threePanelLayout = new ThreePanelLayout();
             ITool fourPanelLayout = new FourPanelLayout();
             ITool parkBackground = new ParkBackground();
+            ITool beachBackground = new BeachBackground();
             ITool studentCharacter = new StudentCharacter();
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
@@ -50,6 +51,7 @@ namespace WeeToons
             threePanelLayout.PanelContainer = this.panelGroupContainer;
             fourPanelLayout.PanelContainer = this.panelGroupContainer;
             parkBackground.PanelContainer = this.panelGroupContainer;
+            beachBackground.PanelContainer = this.panelGroupContainer;
             studentCharacter.PanelContainer = this.panelGroupContainer;
 
             panelTool.AddTool(onePanelLayout);
@@ -57,6 +59,7 @@ namespace WeeToons
             panelTool.AddTool(threePanelLayout);
             panelTool.AddTool(fourPanelLayout);
             backgroundTool.AddTool(parkBackground);
+            backgroundTool.AddTool(beachBackground);
             characterTool.AddTool(studentCharacter);
             #endregion
         }

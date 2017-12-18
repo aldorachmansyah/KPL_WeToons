@@ -9,7 +9,7 @@ using WeeToons.Interfaces;
 
 namespace WeeToons.Tools.Background_Tools
 {
-    class ParkBackground : ToolStripMenuItem, ITool
+    class BeachBackground : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
 
@@ -26,20 +26,20 @@ namespace WeeToons.Tools.Background_Tools
             }
         }
 
-        public ParkBackground()
+        public BeachBackground()
         {
-            this.Text = "Park";
-            this.Name = "parkBackgroundToolStrip";
+            this.Text = "Beach";
+            this.Name = "beachBackgroundToolStrip";
             this.Click += new EventHandler(this.tool_Click);
-            this.Image = new Bitmap(@"..\..\..\Resources\Background\park.jpg");
+            this.Image = new Bitmap(@"..\..\..\Resources\Background\beach.jpg");
         }
 
         public void tool_Click(object sender, EventArgs e)
         {
             IPanel activePanel = this.panelContainer.ActivePanel;
-            if(activePanel != null)
+            if (activePanel != null)
             {
-                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\park.jpg");
+                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\beach.jpg");
                 activePanel.SetBackground(backgroundImage);
             }
         }
