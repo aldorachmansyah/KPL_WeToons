@@ -62,7 +62,11 @@
     <Compile Include="Interfaces\IPanelContainer.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IToolGroup.cs" />
+    <Compile Include="KomikObjects\ChairProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
+    <Compile Include="Tools\Property Tools\Chair.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Property Tools\PropertyTool.cs">
       <SubType>Component</SubType>
     </Compile>

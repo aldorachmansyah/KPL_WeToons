@@ -45,15 +45,18 @@ namespace WeeToons
             ITool onePanelLayout = new OnePanelLayout();
             ITool parkBackground = new ParkBackground();
             ITool studentCharacter = new StudentCharacter();
+            ITool chair = new Chair();
 
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
             parkBackground.PanelContainer = this.panelGroupContainer;
             studentCharacter.PanelContainer = this.panelGroupContainer;
+            chair.PanelContainer = this.panelGroupContainer;
 
             panelTool.AddTool(onePanelLayout);
             backgroundTool.AddTool(parkBackground);
             characterTool.AddTool(studentCharacter);
+            propertyTool.AddTool(chair);
             #endregion
         }
 
