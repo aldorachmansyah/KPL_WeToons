@@ -116,11 +116,11 @@ namespace WeeToons
             //throw new NotImplementedException();
         }
 
-        /* public void AddDrawingObject(KomikObject drawingObject)
+         public void AddDrawingObject(KomikObject drawingObject)
          {
              throw new NotImplementedException();
          }
-         public void DeselectAllObjects()
+        /* public void DeselectAllObjects()
          {
              throw new NotImplementedException();
          }

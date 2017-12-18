@@ -97,7 +97,7 @@ namespace WeeToons
             this.expandButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(721, 37);
+            this.toolStrip1.Size = new System.Drawing.Size(961, 37);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -111,34 +111,34 @@ namespace WeeToons
             this.panelToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("panelToolStrip.Image")));
             this.panelToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.panelToolStrip.Name = "panelToolStrip";
-            this.panelToolStrip.Size = new System.Drawing.Size(79, 34);
+            this.panelToolStrip.Size = new System.Drawing.Size(88, 34);
             this.panelToolStrip.Text = "Panel";
             // 
             // onePanelToolStrip
             // 
             this.onePanelToolStrip.Name = "onePanelToolStrip";
-            this.onePanelToolStrip.Size = new System.Drawing.Size(112, 22);
+            this.onePanelToolStrip.Size = new System.Drawing.Size(131, 26);
             this.onePanelToolStrip.Text = "1 Panel";
             this.onePanelToolStrip.Click += new System.EventHandler(this.onePanelToolStrip_Click);
             // 
             // twoPanelToolStrip
             // 
             this.twoPanelToolStrip.Name = "twoPanelToolStrip";
-            this.twoPanelToolStrip.Size = new System.Drawing.Size(112, 22);
+            this.twoPanelToolStrip.Size = new System.Drawing.Size(131, 26);
             this.twoPanelToolStrip.Text = "2 Panel";
             this.twoPanelToolStrip.Click += new System.EventHandler(this.twoPanelToolStrip_Click);
             // 
             // threePanelToolStrip
             // 
             this.threePanelToolStrip.Name = "threePanelToolStrip";
-            this.threePanelToolStrip.Size = new System.Drawing.Size(112, 22);
+            this.threePanelToolStrip.Size = new System.Drawing.Size(131, 26);
             this.threePanelToolStrip.Text = "3 Panel";
             this.threePanelToolStrip.Click += new System.EventHandler(this.threePanelToolStrip_Click);
             // 
             // fourPanelToolStrip
             // 
             this.fourPanelToolStrip.Name = "fourPanelToolStrip";
-            this.fourPanelToolStrip.Size = new System.Drawing.Size(112, 22);
+            this.fourPanelToolStrip.Size = new System.Drawing.Size(131, 26);
             this.fourPanelToolStrip.Text = "4 Panel";
             this.fourPanelToolStrip.Click += new System.EventHandler(this.fourPanelToolStrip_Click);
             // 
@@ -150,7 +150,7 @@ namespace WeeToons
             this.backgroundToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("backgroundToolStrip.Image")));
             this.backgroundToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.backgroundToolStrip.Name = "backgroundToolStrip";
-            this.backgroundToolStrip.Size = new System.Drawing.Size(114, 34);
+            this.backgroundToolStrip.Size = new System.Drawing.Size(132, 34);
             this.backgroundToolStrip.Text = "Background";
             // 
             // indoorBackgroundToolstrip
@@ -160,27 +160,27 @@ namespace WeeToons
             this.bedroomBackgroundToolStrip,
             this.kitchenBackgroundToolStrip});
             this.indoorBackgroundToolstrip.Name = "indoorBackgroundToolstrip";
-            this.indoorBackgroundToolstrip.Size = new System.Drawing.Size(119, 22);
+            this.indoorBackgroundToolstrip.Size = new System.Drawing.Size(140, 26);
             this.indoorBackgroundToolstrip.Text = "Indoor";
             // 
             // classroomBackgroundToolStrip
             // 
             this.classroomBackgroundToolStrip.Name = "classroomBackgroundToolStrip";
-            this.classroomBackgroundToolStrip.Size = new System.Drawing.Size(130, 22);
+            this.classroomBackgroundToolStrip.Size = new System.Drawing.Size(153, 26);
             this.classroomBackgroundToolStrip.Text = "Classroom";
             this.classroomBackgroundToolStrip.Click += new System.EventHandler(this.classroomBackgroundToolStrip_Click);
             // 
             // bedroomBackgroundToolStrip
             // 
             this.bedroomBackgroundToolStrip.Name = "bedroomBackgroundToolStrip";
-            this.bedroomBackgroundToolStrip.Size = new System.Drawing.Size(130, 22);
+            this.bedroomBackgroundToolStrip.Size = new System.Drawing.Size(153, 26);
             this.bedroomBackgroundToolStrip.Text = "Bedroom";
             this.bedroomBackgroundToolStrip.Click += new System.EventHandler(this.bedroomBackgroundToolStrip_Click);
             // 
             // kitchenBackgroundToolStrip
             // 
             this.kitchenBackgroundToolStrip.Name = "kitchenBackgroundToolStrip";
-            this.kitchenBackgroundToolStrip.Size = new System.Drawing.Size(130, 22);
+            this.kitchenBackgroundToolStrip.Size = new System.Drawing.Size(153, 26);
             this.kitchenBackgroundToolStrip.Text = "Kitchen";
             this.kitchenBackgroundToolStrip.Click += new System.EventHandler(this.kitchenBackgroundToolStrip_Click);
             // 
@@ -190,20 +190,20 @@ namespace WeeToons
             this.parkBackgroundToolStrip,
             this.beachBackgroundToolStrip});
             this.outdoorBackgroundToolstrip.Name = "outdoorBackgroundToolstrip";
-            this.outdoorBackgroundToolstrip.Size = new System.Drawing.Size(119, 22);
+            this.outdoorBackgroundToolstrip.Size = new System.Drawing.Size(140, 26);
             this.outdoorBackgroundToolstrip.Text = "Outdoor";
             // 
             // parkBackgroundToolStrip
             // 
             this.parkBackgroundToolStrip.Name = "parkBackgroundToolStrip";
-            this.parkBackgroundToolStrip.Size = new System.Drawing.Size(106, 22);
+            this.parkBackgroundToolStrip.Size = new System.Drawing.Size(124, 26);
             this.parkBackgroundToolStrip.Text = "Park";
             this.parkBackgroundToolStrip.Click += new System.EventHandler(this.parkBackgroundToolStrip_Click);
             // 
             // beachBackgroundToolStrip
             // 
             this.beachBackgroundToolStrip.Name = "beachBackgroundToolStrip";
-            this.beachBackgroundToolStrip.Size = new System.Drawing.Size(106, 22);
+            this.beachBackgroundToolStrip.Size = new System.Drawing.Size(124, 26);
             this.beachBackgroundToolStrip.Text = "Beach";
             this.beachBackgroundToolStrip.Click += new System.EventHandler(this.beachToolStripMenuItem_Click);
             // 
@@ -212,7 +212,7 @@ namespace WeeToons
             this.shrinkButton.Image = ((System.Drawing.Image)(resources.GetObject("shrinkButton.Image")));
             this.shrinkButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.shrinkButton.Name = "shrinkButton";
-            this.shrinkButton.Size = new System.Drawing.Size(74, 34);
+            this.shrinkButton.Size = new System.Drawing.Size(83, 34);
             this.shrinkButton.Text = "Shrink";
             this.shrinkButton.Click += new System.EventHandler(this.shrinkButton_Click);
             // 
@@ -221,7 +221,7 @@ namespace WeeToons
             this.expandButton.Image = ((System.Drawing.Image)(resources.GetObject("expandButton.Image")));
             this.expandButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.expandButton.Name = "expandButton";
-            this.expandButton.Size = new System.Drawing.Size(79, 34);
+            this.expandButton.Size = new System.Drawing.Size(92, 34);
             this.expandButton.Text = "Expand";
             this.expandButton.Click += new System.EventHandler(this.expandButton_Click);
             // 
@@ -241,7 +241,7 @@ namespace WeeToons
             this.toolStrip2.Location = new System.Drawing.Point(0, 37);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip2.Size = new System.Drawing.Size(44, 665);
+            this.toolStrip2.Size = new System.Drawing.Size(45, 827);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -259,7 +259,7 @@ namespace WeeToons
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(41, 34);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 34);
             this.toolStripDropDownButton1.Text = "Character";
             // 
             // boyToolStripMenuItem
@@ -269,26 +269,26 @@ namespace WeeToons
             this.angryBoyToolStripMenuItem,
             this.sadBoyToolStripMenuItem});
             this.boyToolStripMenuItem.Name = "boyToolStripMenuItem";
-            this.boyToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.boyToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.boyToolStripMenuItem.Text = "Boy";
             // 
             // happyBoyToolStripMenuItem
             // 
             this.happyBoyToolStripMenuItem.Name = "happyBoyToolStripMenuItem";
-            this.happyBoyToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.happyBoyToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.happyBoyToolStripMenuItem.Text = "Happy Boy";
             this.happyBoyToolStripMenuItem.Click += new System.EventHandler(this.happyBoyToolStripMenuItem_Click);
             // 
             // angryBoyToolStripMenuItem
             // 
             this.angryBoyToolStripMenuItem.Name = "angryBoyToolStripMenuItem";
-            this.angryBoyToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.angryBoyToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.angryBoyToolStripMenuItem.Text = "Angry Boy";
             // 
             // sadBoyToolStripMenuItem
             // 
             this.sadBoyToolStripMenuItem.Name = "sadBoyToolStripMenuItem";
-            this.sadBoyToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.sadBoyToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.sadBoyToolStripMenuItem.Text = "Sad Boy";
             // 
             // girlToolStripMenuItem
@@ -298,25 +298,25 @@ namespace WeeToons
             this.angryGirlToolStripMenuItem,
             this.sadGirlToolStripMenuItem});
             this.girlToolStripMenuItem.Name = "girlToolStripMenuItem";
-            this.girlToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.girlToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.girlToolStripMenuItem.Text = "Girl";
             // 
             // happyGirlToolStripMenuItem
             // 
             this.happyGirlToolStripMenuItem.Name = "happyGirlToolStripMenuItem";
-            this.happyGirlToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.happyGirlToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
             this.happyGirlToolStripMenuItem.Text = "Happy Girl";
             // 
             // angryGirlToolStripMenuItem
             // 
             this.angryGirlToolStripMenuItem.Name = "angryGirlToolStripMenuItem";
-            this.angryGirlToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.angryGirlToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
             this.angryGirlToolStripMenuItem.Text = "Angry Girl";
             // 
             // sadGirlToolStripMenuItem
             // 
             this.sadGirlToolStripMenuItem.Name = "sadGirlToolStripMenuItem";
-            this.sadGirlToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.sadGirlToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
             this.sadGirlToolStripMenuItem.Text = "Sad Girl";
             // 
             // dogToolStripMenuItem
@@ -326,55 +326,55 @@ namespace WeeToons
             this.angryDogToolStripMenuItem,
             this.sadDogToolStripMenuItem});
             this.dogToolStripMenuItem.Name = "dogToolStripMenuItem";
-            this.dogToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.dogToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.dogToolStripMenuItem.Text = "Dog";
             // 
             // sleepingDogToolStripMenuItem
             // 
             this.sleepingDogToolStripMenuItem.Name = "sleepingDogToolStripMenuItem";
-            this.sleepingDogToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.sleepingDogToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.sleepingDogToolStripMenuItem.Text = "Happy Dog";
             // 
             // angryDogToolStripMenuItem
             // 
             this.angryDogToolStripMenuItem.Name = "angryDogToolStripMenuItem";
-            this.angryDogToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.angryDogToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.angryDogToolStripMenuItem.Text = "Angry Dog";
             // 
             // sadDogToolStripMenuItem
             // 
             this.sadDogToolStripMenuItem.Name = "sadDogToolStripMenuItem";
-            this.sadDogToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.sadDogToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.sadDogToolStripMenuItem.Text = "Sad Dog";
             // 
             // catToolStripMenuItem
             // 
             this.catToolStripMenuItem.Name = "catToolStripMenuItem";
-            this.catToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.catToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.catToolStripMenuItem.Text = "Cat";
             // 
             // dadToolStripMenuItem
             // 
             this.dadToolStripMenuItem.Name = "dadToolStripMenuItem";
-            this.dadToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.dadToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.dadToolStripMenuItem.Text = "Dad";
             // 
             // momToolStripMenuItem
             // 
             this.momToolStripMenuItem.Name = "momToolStripMenuItem";
-            this.momToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.momToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.momToolStripMenuItem.Text = "Mom";
             // 
             // monsterToolStripMenuItem
             // 
             this.monsterToolStripMenuItem.Name = "monsterToolStripMenuItem";
-            this.monsterToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.monsterToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.monsterToolStripMenuItem.Text = "Monster";
             // 
             // toolStripDropDownButton2
             // 
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(41, 6);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(42, 6);
             // 
             // toolStripDropDownButton3
             // 
@@ -387,37 +387,37 @@ namespace WeeToons
             this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(41, 34);
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(42, 34);
             this.toolStripDropDownButton3.Text = "Property";
             // 
             // treeToolStripMenuItem
             // 
             this.treeToolStripMenuItem.Name = "treeToolStripMenuItem";
-            this.treeToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.treeToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.treeToolStripMenuItem.Text = "Tree";
             // 
             // carToolStripMenuItem
             // 
             this.carToolStripMenuItem.Name = "carToolStripMenuItem";
-            this.carToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.carToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.carToolStripMenuItem.Text = "Car";
             // 
             // deskToolStripMenuItem
             // 
             this.deskToolStripMenuItem.Name = "deskToolStripMenuItem";
-            this.deskToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.deskToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.deskToolStripMenuItem.Text = "Desk";
             // 
             // computerToolStripMenuItem
             // 
             this.computerToolStripMenuItem.Name = "computerToolStripMenuItem";
-            this.computerToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.computerToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.computerToolStripMenuItem.Text = "Computer";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(41, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(42, 6);
             // 
             // toolStripDropDownButton4
             // 
@@ -428,25 +428,25 @@ namespace WeeToons
             this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
             this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(41, 34);
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(42, 34);
             this.toolStripDropDownButton4.Text = "Bubble";
             // 
             // roundBubbleToolStripMenuItem
             // 
             this.roundBubbleToolStripMenuItem.Name = "roundBubbleToolStripMenuItem";
-            this.roundBubbleToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.roundBubbleToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.roundBubbleToolStripMenuItem.Text = "Round Bubble";
             // 
             // rectangleBubbleToolStripMenuItem
             // 
             this.rectangleBubbleToolStripMenuItem.Name = "rectangleBubbleToolStripMenuItem";
-            this.rectangleBubbleToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.rectangleBubbleToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.rectangleBubbleToolStripMenuItem.Text = "Rectangle Bubble";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(41, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(42, 6);
             // 
             // toolStripDropDownButton5
             // 
@@ -454,14 +454,16 @@ namespace WeeToons
             this.toolStripDropDownButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton5.Image")));
             this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            this.toolStripDropDownButton5.Size = new System.Drawing.Size(41, 34);
+            this.toolStripDropDownButton5.Size = new System.Drawing.Size(42, 34);
             this.toolStripDropDownButton5.Text = "Text";
+            this.toolStripDropDownButton5.Click += new System.EventHandler(this.toolStripDropDownButton5_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(47, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(63, 49);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(674, 662);
+            this.pictureBox1.Size = new System.Drawing.Size(899, 815);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -479,25 +481,28 @@ namespace WeeToons
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(28, 40);
+            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(37, 49);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.LeftToolStripPanelVisible = false;
-            this.toolStripContainer1.Location = new System.Drawing.Point(693, 40);
+            this.toolStripContainer1.Location = new System.Drawing.Point(924, 49);
+            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(28, 40);
+            this.toolStripContainer1.Size = new System.Drawing.Size(37, 49);
             this.toolStripContainer1.TabIndex = 3;
             this.toolStripContainer1.Text = "toolStripContainer1";
             this.toolStripContainer1.TopToolStripPanelVisible = false;
             // 
             // WeeToonsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 702);
+            this.ClientSize = new System.Drawing.Size(961, 864);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "WeeToonsForm";
             this.Text = "WeeToons";
             this.toolStrip1.ResumeLayout(false);

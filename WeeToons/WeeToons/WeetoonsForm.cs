@@ -16,6 +16,7 @@ namespace WeeToons
     public partial class WeeToonsForm : Form
     {
         private Point firstPoint = new Point();
+        private ICanvas canvas;
         Image targetImage;
         int height;
         int width;
@@ -256,6 +257,17 @@ namespace WeeToons
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripDropDownButton5_Click(object sender, EventArgs e)
+        {
+            string input;
+      
+            Text text = new Text();
+            input = Microsoft.VisualBasic.Interaction.InputBox("Input Text", "Text Box", "", 500, 300);
+            text.Value = input;
+
+            canvas.AddDrawingObject(text);
         }
     }
 }

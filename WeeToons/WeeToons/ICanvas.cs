@@ -18,8 +18,8 @@ namespace WeeToons
         void Repaint();
         void SetBackgroundColor(Color color);
 
-        /*void AddDrawingObject(KomikObject drawingObject);
-        void RemoveDrawingObject(KomikObject drawingObject);
+        void AddDrawingObject(KomikObject drawingObject);
+        /*void RemoveDrawingObject(KomikObject drawingObject);
         KomikObject GetObjectAt(int x, int y);
         KomikObject SelectObjectAt(int x, int y);*/
         void DeselectAllObjects();
