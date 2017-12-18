@@ -81,6 +81,9 @@
     <Compile Include="Tools\Panel Tools\PanelTool.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Panel Tools\TwoPanelLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Selection Tools\SelectionTool.cs" />
     <Compile Include="Tools\ToolDropdownObject.cs">
       <SubType>Component</SubType>
@@ -124,9 +127,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Tools\Panel Tools\park.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
