@@ -75,8 +75,18 @@ namespace WeeToons
             this.rectangleBubbleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripButton();
+<<<<<<< HEAD
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+=======
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.toolStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStripContainer1.SuspendLayout();
+>>>>>>> cd5a23864417c3949bb8b40c4e1e591551afc650
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -150,7 +160,7 @@ namespace WeeToons
             this.bedroomBackgroundToolStrip,
             this.kitchenBackgroundToolStrip});
             this.indoorBackgroundToolstrip.Name = "indoorBackgroundToolstrip";
-            this.indoorBackgroundToolstrip.Size = new System.Drawing.Size(152, 22);
+            this.indoorBackgroundToolstrip.Size = new System.Drawing.Size(119, 22);
             this.indoorBackgroundToolstrip.Text = "Indoor";
             // 
             // classroomBackgroundToolStrip
@@ -180,7 +190,7 @@ namespace WeeToons
             this.parkBackgroundToolStrip,
             this.beachBackgroundToolStrip});
             this.outdoorBackgroundToolstrip.Name = "outdoorBackgroundToolstrip";
-            this.outdoorBackgroundToolstrip.Size = new System.Drawing.Size(152, 22);
+            this.outdoorBackgroundToolstrip.Size = new System.Drawing.Size(119, 22);
             this.outdoorBackgroundToolstrip.Text = "Outdoor";
             // 
             // parkBackgroundToolStrip
@@ -199,6 +209,7 @@ namespace WeeToons
             // 
             // toolStrip2
             // 
+            this.toolStrip2.AllowItemReorder = true;
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -427,11 +438,51 @@ namespace WeeToons
             this.toolStripDropDownButton5.Size = new System.Drawing.Size(41, 34);
             this.toolStripDropDownButton5.Text = "Text";
             // 
+<<<<<<< HEAD
+=======
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(47, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(674, 662);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // toolStripContainer1
+            // 
+            this.toolStripContainer1.BottomToolStripPanelVisible = false;
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(28, 40);
+            this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
+            this.toolStripContainer1.LeftToolStripPanelVisible = false;
+            this.toolStripContainer1.Location = new System.Drawing.Point(693, 40);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(28, 40);
+            this.toolStripContainer1.TabIndex = 3;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            this.toolStripContainer1.TopToolStripPanelVisible = false;
+            // 
+>>>>>>> cd5a23864417c3949bb8b40c4e1e591551afc650
             // WeeToonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 702);
+<<<<<<< HEAD
+=======
+            this.Controls.Add(this.toolStripContainer1);
+            this.Controls.Add(this.pictureBox1);
+>>>>>>> cd5a23864417c3949bb8b40c4e1e591551afc650
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Name = "WeeToonsForm";
@@ -440,6 +491,12 @@ namespace WeeToons
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+<<<<<<< HEAD
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
+>>>>>>> cd5a23864417c3949bb8b40c4e1e591551afc650
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,6 +550,11 @@ namespace WeeToons
         private System.Windows.Forms.FlowLayoutPanel activePanel;
         private List<System.Windows.Forms.FlowLayoutPanel> panelGroup = new List<System.Windows.Forms.FlowLayoutPanel>();
         private System.Windows.Forms.ToolStripMenuItem fourPanelToolStrip;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripButton shrinkButton;
+        private System.Windows.Forms.ToolStripButton expandButton;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
     }
 }
 

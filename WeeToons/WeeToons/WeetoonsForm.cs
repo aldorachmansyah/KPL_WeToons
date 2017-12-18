@@ -13,9 +13,73 @@ namespace WeeToons
 {
     public partial class WeeToonsForm : Form
     {
+<<<<<<< HEAD
         public WeeToonsForm()
         {
             InitializeComponent();
+=======
+        private Point firstPoint = new Point();
+        Image targetImage;
+        int height;
+        int width;
+        private IToolbox toolbox;
+        private IEditor editor;
+        //private IToolbar toolbar;
+        //private IMenubar menubar;
+
+        public WeeToonsForm()
+        {
+            InitializeComponent();
+            InitUI();
+            
+        }
+
+        private void InitUI()
+        {
+            #region Editor and Canvas
+            Debug.WriteLine("Loading canvas...");
+            this.editor = new DefaultEditor();
+            this.pictureBox1.Controls.Add((Control)this.editor);
+            #endregion
+
+            #region Toolbox
+
+            // Initializing toolbox
+            Debug.WriteLine("Loading toolbox...");
+            this.toolbox = new DefaultToolbox();
+            this.toolStripContainer1.Dock = DockStyle.Right;
+            this.toolStripContainer1.RightToolStripPanel.Controls.Add((Control)this.toolbox);
+            this.editor.Toolbox = toolbox;
+
+            #endregion
+
+            #region Tools
+
+            // Initializing tools
+            Debug.WriteLine("Loading tools...");
+            this.toolbox.AddTool(new SelectionTool());
+            this.toolbox.ToolSelected += Toolbox_ToolSelected;
+
+
+
+            #endregion
+
+        }
+
+        private void Toolbox_ToolSelected(ITool tool)
+        {
+            if (this.editor != null)
+            {
+                Debug.WriteLine("Tool " + tool.Name + " is selected");
+                ICanvas canvas = this.editor.GetSelectedCanvas();
+                if(canvas != null)
+                {
+                    canvas.SetActiveTool(tool);
+                    tool.TargetCanvas = canvas;
+                }
+      
+            }
+>>>>>>> cd5a23864417c3949bb8b40c4e1e591551afc650
         }
 
         private void onePanelToolStrip_Click(object sender, EventArgs e)
@@ -146,6 +210,11 @@ namespace WeeToons
                 this.activePanel.BackgroundImage = backgroundImage;
                 this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
             }
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
