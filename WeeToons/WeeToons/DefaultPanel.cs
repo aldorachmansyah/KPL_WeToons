@@ -53,7 +53,6 @@ namespace WeeToons
             this.Name = panelName;
             this.Size = new System.Drawing.Size(height, width);
             this.TabIndex = 2;
-            this.Click += Canvas_Click;
             this.Paint += Canvas_Paint;
             this.MouseDown += Canvas_MouseDown;
             this.MouseUp += Canvas_MouseUp;
@@ -62,11 +61,6 @@ namespace WeeToons
             this.KeyDown += Canvas_KeyDown;
             this.KeyUp += Canvas_KeyUp;
             this.PreviewKeyDown += Canvas_PreviewKeyDown;
-        }
-
-        private void Canvas_Click(object sender, EventArgs e)
-        {
-            this.selectionTool.PanelContainer.SetActivePanel(this);
         }
 
         public void ChangeBorder(BorderStyle borderStyle)

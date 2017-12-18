@@ -45,6 +45,7 @@ namespace WeeToons
 
             this.Controls.Add(newPanel);
             this.panels.Add(panel);
+            newPanel.Click += this.panel_Click;
         }
 
         public void SetActivePanel(IPanel panel)
