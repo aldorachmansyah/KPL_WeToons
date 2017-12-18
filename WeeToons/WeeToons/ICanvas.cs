@@ -17,11 +17,10 @@ namespace WeeToons
         void SetActiveTool(ITool tool);
         void Repaint();
         void SetBackgroundColor(Color color);
+        //Point GetCanvasLocation();
 
         void AddDrawingObject(KomikObject drawingObject);
-        /*void RemoveDrawingObject(KomikObject drawingObject);
-        KomikObject GetObjectAt(int x, int y);
-        KomikObject SelectObjectAt(int x, int y);*/
+        KomikObject GetObjectAt(int x, int y);        
         void DeselectAllObjects();
     }
 }

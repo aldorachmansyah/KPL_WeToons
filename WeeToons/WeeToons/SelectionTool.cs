@@ -55,7 +55,7 @@ namespace WeeToons
             if (e.Button == MouseButtons.Left && canvas != null)
             {
                 canvas.DeselectAllObjects();
-                // selectedObject = canvas.SelectObjectAt(e.X, e.Y);
+                //selectedObject = canvas.SelectObjectAt(e.X, e.Y);
                 Debug.Write("selected");
             }
            
@@ -63,7 +63,7 @@ namespace WeeToons
 
         public void ToolMouseMove(object sender, MouseEventArgs e)
         {
-            /*if (e.Button == MouseButtons.Left && canvas != null)
+            if(e.Button == MouseButtons.Left && canvas != null)
             {
                 if (selectedObject != null)
                 {
@@ -74,7 +74,7 @@ namespace WeeToons
 
                     selectedObject.Translate(e.X, e.Y, xAmount, yAmount);
                 }
-            }*/
+            }
         }
 
         public void ToolMouseUp(object sender, MouseEventArgs e)
@@ -84,10 +84,6 @@ namespace WeeToons
 
         public void ToolMouseDoubleClick(object sender, MouseEventArgs e)
         {
-            /*Text text = new Text();
-            text.Value = "Untitled";
-            selectedObject.Add(text);
-            Debug.WriteLine("selection tool double click");*/
         }
 
         public void ToolKeyUp(object sender, KeyEventArgs e)
