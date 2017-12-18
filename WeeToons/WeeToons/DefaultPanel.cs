@@ -102,8 +102,6 @@ namespace WeeToons
 
             if (Form.ModifierKeys == Keys.Control)
             {
-                List<KomikObject> removeTemp = new List<KomikObject>();
-                List<KomikObject> addTemp = new List<KomikObject>();
 
                 ObjectGroup grouping = new ObjectGroup();
                 foreach (KomikObject obj in comicObjects.ToList())
@@ -115,6 +113,7 @@ namespace WeeToons
                         grouping.Add(obj);
                         this.comicObjects.Remove(obj);
                         this.comicObjects.Add(grouping);
+                        Debug.WriteLine(comicObjects.Count);
                     }
                 }
 
