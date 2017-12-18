@@ -48,13 +48,50 @@
   <ItemGroup>
     <Compile Include="ActiveState.cs" />
     <Compile Include="Canvas.cs" />
+    <Compile Include="DefaultPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultPanelContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultToolGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IComicObject.cs" />
+    <Compile Include="Interfaces\IPanel.cs" />
+    <Compile Include="Interfaces\IPanelContainer.cs" />
+    <Compile Include="Interfaces\ITool.cs" />
+    <Compile Include="Interfaces\IToolGroup.cs" />
+    <Compile Include="KomikObjects\StudentProperty.cs" />
+    <Compile Include="Tools\Background Tools\BackgroundTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Background Tools\ParkBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\StudentCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\CharacterTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Panel Tools\OnePanelLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Panel Tools\PanelTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Selection Tools\SelectionTool.cs" />
+    <Compile Include="Tools\ToolDropdownObject.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WeetoonsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WeetoonsForm.Designer.cs">
       <DependentUpon>WeetoonsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="KomikObject.cs" />
+    <Compile Include="KomikObjects\KomikObject.cs" />
     <Compile Include="ObjectGroup.cs" />
     <Compile Include="PreviewState.cs" />
     <Compile Include="Program.cs" />
@@ -88,6 +125,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tools\Panel Tools\park.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

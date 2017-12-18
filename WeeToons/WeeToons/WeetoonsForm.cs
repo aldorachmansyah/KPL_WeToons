@@ -1,100 +1,105 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeeToons.Interfaces;
+using WeeToons.Tools.Background_Tools;
+using WeeToons.Tools.Character_Tools;
 
 namespace WeeToons
 {
     public partial class WeeToonsForm : Form
     {
+        private List<IPanel> panels;
+        private IPanel panelActive;
+        private IPanelContainer panelGroupContainer;
+
         public WeeToonsForm()
         {
+            panels = new List<IPanel>();
             InitializeComponent();
+            InitUI();
         }
 
-        private void onePanelToolStrip_Click(object sender, EventArgs e)
+        public void InitUI()
         {
-            removeAllPanel();
-            FlowLayoutPanel newPanel = renderPanel(49, 37, 660, 660, "Full Single Panel");
-            activatePanel(newPanel);
+            #region CONTAINER
+            this.panelGroupContainer = new DefaultPanelContainer();
+            this.Controls.Add((GroupBox)panelGroupContainer);
+            #endregion
+
+            #region TOOL DROPDOWN
+            IToolGroup panelTool = new PanelTool();
+            IToolGroup backgroundTool = new BackgroundTool();
+            IToolGroup characterTool = new CharacterTool();
+
+            this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
+            this.topToolStrip.Items.Add((ToolStripDropDownButton)backgroundTool);
+            this.leftToolStrip.Items.Add((ToolStripDropDownButton)characterTool);
+            #endregion
+
+            #region TOOLS
+            ITool onePanelLayout = new OnePanelLayout();
+            ITool parkBackground = new ParkBackground();
+            ITool studentCharacter = new StudentCharacter();
+
+            onePanelLayout.PanelContainer = this.panelGroupContainer;
+            parkBackground.PanelContainer = this.panelGroupContainer;
+            studentCharacter.PanelContainer = this.panelGroupContainer;
+
+            panelTool.AddTool(onePanelLayout);
+            backgroundTool.AddTool(parkBackground);
+            characterTool.AddTool(studentCharacter);
+            #endregion
         }
 
-        private void twoPanelToolStrip_Click(object sender, EventArgs e)
+        //private void onePanelToolStrip_Click(object sender, EventArgs e)
+        //{
+        //    removeAllPanel();
+        //    IPanel newPanel = new DefaultPanel(this, 49, 37, 660, 660, "Full Single Panel");
+        //    activatePanel(newPanel);
+        //}
+
+        //private void twoPanelToolStrip_Click(object sender, EventArgs e)
+        //{
+        //    removeAllPanel();
+        //    IPanel leftPanel = new DefaultPanel(this, 49, 37, 320, 320, "left double panel");
+        //    IPanel rightPanel = new DefaultPanel(this, 375, 37, 320, 320, "right double panel");
+        //    activatePanel(leftPanel);
+        //}
+
+        //private void threePanelToolStrip_Click(object sender, EventArgs e)
+        //{
+        //    removeAllPanel();
+        //    IPanel leftPanelTop = new DefaultPanel(this, 49, 37, 200, 200, "Top Left Triple Panel");
+        //    IPanel leftPanelBottom = new DefaultPanel(this, 49, 257, 200, 200, "Bottom Left Triple Panel");
+        //    IPanel rightPanel = new DefaultPanel(this, 265, 37, 420, 420, "Right Triple Panel");
+        //    activatePanel(leftPanelTop);
+        //}
+
+        //private void fourPanelToolStrip_Click(object sender, EventArgs e)
+        //{
+        //    removeAllPanel();
+        //    IPanel leftTopPanel = new DefaultPanel(this, 49, 37, 320, 320, "Top Left Quartet Panel");
+        //    IPanel rightTopPanel = new DefaultPanel(this, 375, 37, 320, 320, "Top Right Quartet Panel");
+        //    IPanel leftBottomPanel = new DefaultPanel(this, 47, 370, 320, 320, "Bottom Left Quartet Panel");
+        //    IPanel rightBottomPanel = new DefaultPanel(this, 375, 370, 320, 320, "Bottom Right Quartet Panel");
+        //    activatePanel(leftTopPanel);
+        //}
+
+        private void activatePanel(IPanel panel)
         {
-            removeAllPanel();
-            FlowLayoutPanel leftPanel = renderPanel(49, 37, 320, 320, "Left Double Panel");
-            FlowLayoutPanel rightPanel = renderPanel(375, 37, 320, 320, "Right Double Panel");
-            activatePanel(leftPanel);
-        }
-
-        private void threePanelToolStrip_Click(object sender, EventArgs e)
-        {
-            removeAllPanel();
-            FlowLayoutPanel leftPanelTop = renderPanel(49, 37, 200, 200, "Top Left Triple Panel");
-            FlowLayoutPanel leftPanelBottom = renderPanel(49, 257, 200, 200, "Bottom Left Triple Panel");
-            FlowLayoutPanel rightPanel = renderPanel(265, 37, 420, 420, "Right Triple Panel");
-            activatePanel(leftPanelTop);
-        }
-
-        private void fourPanelToolStrip_Click(object sender, EventArgs e)
-        {
-            removeAllPanel();
-            FlowLayoutPanel leftTopPanel = renderPanel(49, 37, 320, 320, "Top Left Quartet Panel");
-            FlowLayoutPanel rightTopPanel = renderPanel(375, 37, 320, 320, "Top Right Quartet Panel");
-            FlowLayoutPanel leftBottomPanel = renderPanel(47, 370, 320, 320, "Bottom Left Quartet Panel");
-            FlowLayoutPanel rightBottomPanel = renderPanel(375, 370, 320, 320, "Bottom Right Quartet Panel");
-            activatePanel(leftTopPanel);
-        }
-
-        private FlowLayoutPanel renderPanel(int xPosition, int yPosition, int width, int height, string panelName = "Unknown Panel")
-        {
-            System.Windows.Forms.FlowLayoutPanel panel;
-            panel = new System.Windows.Forms.FlowLayoutPanel();
-
-            panel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel.Location = new System.Drawing.Point(xPosition, yPosition);
-            panel.Name = panelName;
-            panel.Size = new System.Drawing.Size(height, width);
-            panel.TabIndex = 2;
-            panel.Click += new System.EventHandler(this.panel_Click);
-
-            this.Controls.Add(panel);
-            this.panelGroup.Add(panel);
-
-            return panel;
-        }
-
-        private void activatePanel(FlowLayoutPanel panel)
-        {
-            if(this.activePanel != null)
+            if(this.panelActive != null)
             {
-                this.activePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                this.panelActive.ChangeBorder(BorderStyle.FixedSingle);
             }
-            panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.activePanel = panel;
+            panel.ChangeBorder(BorderStyle.Fixed3D);
+            this.panelActive = panel;
         }
 
-        private void removeAllPanel()
+        public void panel_Click(object sender, EventArgs e)
         {
-            if(this.panelGroup != null)
-            {
-                foreach (FlowLayoutPanel panel in this.panelGroup)
-                {
-                    this.Controls.Remove(panel);
-                }
-            }
-        }
-
-        private void panel_Click(object sender, EventArgs e)
-        {
-            FlowLayoutPanel panel = sender as FlowLayoutPanel;
+            IPanel panel = sender as IPanel;
             activatePanel(panel);
         }
 
@@ -146,6 +151,11 @@ namespace WeeToons
                 this.activePanel.BackgroundImage = backgroundImage;
                 this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
             }
+        }
+
+        private void onePanelToolStrip_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

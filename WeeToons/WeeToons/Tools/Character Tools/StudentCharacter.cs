@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using WeeToons.Interfaces;
+using WeeToons.KomikObjects;
+
+namespace WeeToons.Tools.Background_Tools
+{
+    class StudentCharacter : ToolStripMenuItem, ITool
+    {
+        private IPanelContainer panelContainer;
+
+        public IPanelContainer PanelContainer
+        {
+            get
+            {
+                return this.panelContainer;
+            }
+
+            set
+            {
+                this.panelContainer = value;
+            }
+        }
+
+        public StudentCharacter()
+        {
+            this.Text = "Student";
+            this.Name = "studentCharacterToolStrip";
+            this.Click += new EventHandler(this.tool_Click);
+        }
+
+        public void tool_Click(object sender, EventArgs e)
+        {
+            IPanel panel = this.panelContainer.ActivePanel;
+            if(panel != null)
+            {
+                StudentProperty student = new StudentProperty();
+                panel.AddComicObject((KomikObject)student);
+            }
+        }
+    }
+}

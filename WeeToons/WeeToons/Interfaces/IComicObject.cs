@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WeeToons
+namespace WeeToons.Interfaces
 {
-    class KomikObject
+    public interface IComicObject
     {
+        
     }
 }
