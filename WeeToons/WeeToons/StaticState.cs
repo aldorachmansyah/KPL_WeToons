@@ -21,7 +21,7 @@ namespace WeeToons
 
         public override void Draw(KomikObject obj)
         {
-            throw new NotImplementedException();
+            obj.RenderOnStaticView();
         }
 
         public override void Select(KomikObject obj)
