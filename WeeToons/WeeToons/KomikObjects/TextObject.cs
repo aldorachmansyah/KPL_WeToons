@@ -5,47 +5,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WeeToons
+namespace WeeToons.KomikObjects
 {
-    public abstract class KomikObject
+    public abstract class TextObject : KomikObject
     {
         private Graphics graphics;
+        private SizeF textSize;
 
+        public string Value { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
         public string PropertyPath { get; set; }
-        public int Width { get; set; }
-        public int Height { get; set; }
-        public Font font;
-        public Brush brush;
 
-
-        public KomikObject()
+        public TextObject()
         {
             this.ChangeState(StaticState.GetInstance());
         }
 
-        public State WeState
-        {
-            get
-            {
-                return this.state;
-            }
-        }
-
         private State state;
 
-        public virtual void Select()
+        public override void Select()
         {
             this.state.Select(this);
         }
 
-        public virtual void Deselect()
+        public override void Deselect()
         {
             this.state.Deselect(this);
         }
 
-        public virtual bool Intersect(int xTest, int yTest)
+        public override bool Intersect(int xTest, int yTest)
         {
             if ((xTest >= X && xTest <= X + Width) && (yTest >= Y && yTest <= Y + Height))
             {
@@ -54,36 +43,34 @@ namespace WeeToons
             }
             return false;
         }
-        public virtual void Translate(int x, int y, int xAmount, int yAmount)
+        public override void Translate(int x, int y, int xAmount, int yAmount)
         {
             this.X += xAmount;
             this.Y += yAmount;
         }
-        public virtual void RenderOnEditingView()
+        public override void RenderOnEditingView()
         {
             Image imageBox = Bitmap.FromFile(this.PropertyPath);
             GetGraphics().DrawImage(imageBox, this.X, this.Y, this.Width, this.Height);
             GetGraphics().DrawRectangle(new Pen(Brushes.Red, 5), new Rectangle(this.X, this.Y, this.Width, this.Height));
 
         }
-        public virtual void RenderOnStaticView()
+        public override void RenderOnStaticView()
         {
-            Image imageBox = Bitmap.FromFile(this.PropertyPath);
-            string value;
-            GetGraphics().DrawImage(imageBox, this.X, this.Y, this.Width, this.Height);
+            GetGraphics().DrawString(Value, font, brush, new PointF(X, Y));
+            textSize = GetGraphics().MeasureString(Value, font);
         }
 
-
-        public virtual void Draw()
+        public override void Draw()
         {
             this.state.Draw(this);
         }
-        public virtual void SetGraphics(Graphics graphics)
+        public override void SetGraphics(Graphics graphics)
         {
             this.graphics = graphics;
         }
 
-        public virtual Graphics GetGraphics()
+        public override Graphics GetGraphics()
         {
             return this.graphics;
         }
@@ -92,5 +79,8 @@ namespace WeeToons
         {
             this.state = state;
         }
+
+        public abstract void SetText(string value);
+        public abstract string GetText();
     }
 }

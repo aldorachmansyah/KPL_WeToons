@@ -68,6 +68,7 @@
     <Compile Include="KomikObjects\DogProperty.cs" />
     <Compile Include="KomikObjects\FoodStallProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
+    <Compile Include="KomikObjects\TextObject.cs" />
     <Compile Include="KomikObjects\TextProperty.cs" />
     <Compile Include="KomikObjects\TreeProperty.cs" />
     <Compile Include="Tools\Property Tools\Ball.cs">

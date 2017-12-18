@@ -14,7 +14,6 @@ namespace WeeToons.Tools.Text_Tools
     class Text : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
-        public string Value{get; set;}
 
         public IPanelContainer PanelContainer
         {
@@ -43,9 +42,9 @@ namespace WeeToons.Tools.Text_Tools
             if (panel != null)
             {
                 string input;
-                //text.Value = input;
                 TextProperty text = new TextProperty();
                 input = Microsoft.VisualBasic.Interaction.InputBox("Input Text", "Text Box", "", 500, 300);
+                text.Value = input;
                 Debug.WriteLine("masuk");
                 panel.AddComicObject((KomikObject)text);
             }

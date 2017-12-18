@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace WeeToons.KomikObjects
 {
-    class TextProperty : KomikObject
+    class TextProperty : TextObject
     {
         public TextProperty()
         {
@@ -15,6 +15,16 @@ namespace WeeToons.KomikObjects
 
             FontFamily fontFamily = new FontFamily("Arial");
             font = new Font(fontFamily, 16, FontStyle.Regular, GraphicsUnit.Pixel);
+        }
+
+        public override string GetText()
+        {
+            return Value;
+        }
+
+        public override void SetText(string value)
+        {
+            this.Value = value;
         }
     }
 }
