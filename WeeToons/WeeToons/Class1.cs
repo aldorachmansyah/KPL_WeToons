@@ -18,8 +18,8 @@ namespace WeeToons
 
         public Benda ()
         {
-            this.width = 50;
-            this.height = 50;
+            this.width = 200;
+            this.height = 200;
             this.x = 0;
             this.y = 0;
         }
