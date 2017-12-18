@@ -105,6 +105,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\FourPanelLayout.cs">
+	  <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Character Tools\SwimmerCharacter.cs">
       <SubType>Component</SubType>
     </Compile>
