@@ -63,6 +63,7 @@
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IToolGroup.cs" />
     <Compile Include="KomikObjects\ChefProperty.cs" />
+    <Compile Include="KomikObjects\DoctorProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
     <Compile Include="KomikObjects\SwimmerProperty.cs" />
     <Compile Include="Tools\Background Tools\BackgroundTool.cs">
@@ -72,6 +73,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Character Tools\ChefCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\DoctorCharacter.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Character Tools\StudentCharacter.cs">
