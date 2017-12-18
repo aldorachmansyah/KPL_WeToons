@@ -48,6 +48,11 @@
   <ItemGroup>
     <Compile Include="ActiveState.cs" />
     <Compile Include="Canvas.cs" />
+    <Compile Include="DefaultPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IComicObject.cs" />
+    <Compile Include="Interfaces\IPanel.cs" />
     <Compile Include="WeetoonsForm.cs">
       <SubType>Form</SubType>
     </Compile>

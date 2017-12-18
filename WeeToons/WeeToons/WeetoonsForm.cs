@@ -8,48 +8,59 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeeToons.Interfaces;
 
 namespace WeeToons
 {
     public partial class WeeToonsForm : Form
     {
+        private List<IPanel> panels;
+        private IPanel panelActive;
+
         public WeeToonsForm()
         {
+            panels = new List<IPanel>();
             InitializeComponent();
+        }
+
+        public void AddPanels(IPanel panel)
+        {
+            this.Controls.Add((FlowLayoutPanel)panel);
+            this.panels.Add(panel);
         }
 
         private void onePanelToolStrip_Click(object sender, EventArgs e)
         {
             removeAllPanel();
-            FlowLayoutPanel newPanel = renderPanel(49, 37, 660, 660, "Full Single Panel");
+            IPanel newPanel = new DefaultPanel(this, 49, 37, 660, 660, "Full Single Panel");
             activatePanel(newPanel);
         }
 
         private void twoPanelToolStrip_Click(object sender, EventArgs e)
         {
             removeAllPanel();
-            FlowLayoutPanel leftPanel = renderPanel(49, 37, 320, 320, "Left Double Panel");
-            FlowLayoutPanel rightPanel = renderPanel(375, 37, 320, 320, "Right Double Panel");
-            activatePanel(leftPanel);
+            //FlowLayoutPanel leftPanel = renderPanel(49, 37, 320, 320, "Left Double Panel");
+            //FlowLayoutPanel rightPanel = renderPanel(375, 37, 320, 320, "Right Double Panel");
+            //activatePanel(leftPanel);
         }
 
         private void threePanelToolStrip_Click(object sender, EventArgs e)
         {
             removeAllPanel();
-            FlowLayoutPanel leftPanelTop = renderPanel(49, 37, 200, 200, "Top Left Triple Panel");
-            FlowLayoutPanel leftPanelBottom = renderPanel(49, 257, 200, 200, "Bottom Left Triple Panel");
-            FlowLayoutPanel rightPanel = renderPanel(265, 37, 420, 420, "Right Triple Panel");
-            activatePanel(leftPanelTop);
+            //FlowLayoutPanel leftPanelTop = renderPanel(49, 37, 200, 200, "Top Left Triple Panel");
+            //FlowLayoutPanel leftPanelBottom = renderPanel(49, 257, 200, 200, "Bottom Left Triple Panel");
+            //FlowLayoutPanel rightPanel = renderPanel(265, 37, 420, 420, "Right Triple Panel");
+            //activatePanel(leftPanelTop);
         }
 
         private void fourPanelToolStrip_Click(object sender, EventArgs e)
         {
             removeAllPanel();
-            FlowLayoutPanel leftTopPanel = renderPanel(49, 37, 320, 320, "Top Left Quartet Panel");
-            FlowLayoutPanel rightTopPanel = renderPanel(375, 37, 320, 320, "Top Right Quartet Panel");
-            FlowLayoutPanel leftBottomPanel = renderPanel(47, 370, 320, 320, "Bottom Left Quartet Panel");
-            FlowLayoutPanel rightBottomPanel = renderPanel(375, 370, 320, 320, "Bottom Right Quartet Panel");
-            activatePanel(leftTopPanel);
+            //FlowLayoutPanel leftTopPanel = renderPanel(49, 37, 320, 320, "Top Left Quartet Panel");
+            //FlowLayoutPanel rightTopPanel = renderPanel(375, 37, 320, 320, "Top Right Quartet Panel");
+            //FlowLayoutPanel leftBottomPanel = renderPanel(47, 370, 320, 320, "Bottom Left Quartet Panel");
+            //FlowLayoutPanel rightBottomPanel = renderPanel(375, 370, 320, 320, "Bottom Right Quartet Panel");
+            //activatePanel(leftTopPanel);
         }
 
         private FlowLayoutPanel renderPanel(int xPosition, int yPosition, int width, int height, string panelName = "Unknown Panel")
@@ -71,14 +82,14 @@ namespace WeeToons
             return panel;
         }
 
-        private void activatePanel(FlowLayoutPanel panel)
+        private void activatePanel(IPanel panel)
         {
-            if(this.activePanel != null)
+            if(this.panelActive != null)
             {
-                this.activePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                this.panelActive.ChangeBorder(BorderStyle.FixedSingle);
             }
-            panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.activePanel = panel;
+            panel.ChangeBorder(BorderStyle.Fixed3D);
+            this.panelActive = panel;
         }
 
         private void removeAllPanel()
@@ -92,9 +103,9 @@ namespace WeeToons
             }
         }
 
-        private void panel_Click(object sender, EventArgs e)
+        public void panel_Click(object sender, EventArgs e)
         {
-            FlowLayoutPanel panel = sender as FlowLayoutPanel;
+            IPanel panel = sender as IPanel;
             activatePanel(panel);
         }
 
