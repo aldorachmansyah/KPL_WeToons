@@ -103,11 +103,15 @@ namespace WeeToons
 
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (this.selectionTool != null)
+            if (e.Button == MouseButtons.Left)
             {
-                this.selectionTool.ToolMouseMove(sender, e);
-                this.Repaint();
+                if (this.selectionTool != null)
+                {
+                    this.selectionTool.ToolMouseMove(sender, e);
+                    this.Repaint();
+                }
             }
+        
         }
 
         private void Canvas_MouseDown(object sender, MouseEventArgs e)
