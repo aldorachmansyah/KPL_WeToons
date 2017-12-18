@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace WeeToons
         public string PropertyPath { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
+        public Font font;
+        public Brush brush;
 
 
         public KomikObject()
@@ -33,12 +36,12 @@ namespace WeeToons
 
         private State state;
 
-        public void Select()
+        public virtual void Select()
         {
             this.state.Select(this);
         }
 
-        public void Deselect()
+        public virtual void Deselect()
         {
             this.state.Deselect(this);
         }
