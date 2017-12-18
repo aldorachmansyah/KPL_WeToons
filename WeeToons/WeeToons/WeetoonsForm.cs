@@ -43,16 +43,19 @@ namespace WeeToons
             ITool parkBackground = new ParkBackground();
             ITool studentCharacter = new StudentCharacter();
             ITool swimmerCharacter = new SwimmerCharacter();
+            ITool chefCharacter = new ChefCharacter();
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
             parkBackground.PanelContainer = this.panelGroupContainer;
             studentCharacter.PanelContainer = this.panelGroupContainer;
             swimmerCharacter.PanelContainer = this.panelGroupContainer;
+            chefCharacter.PanelContainer = this.panelGroupContainer;
 
             panelTool.AddTool(onePanelLayout);
             backgroundTool.AddTool(parkBackground);
             characterTool.AddTool(studentCharacter);
             characterTool.AddTool(swimmerCharacter);
+            characterTool.AddTool(chefCharacter);
             #endregion
         }
 
