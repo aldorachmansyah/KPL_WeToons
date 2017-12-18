@@ -59,6 +59,7 @@ namespace WeeToons
             ITool chair = new Chair();
             ITool tree = new Tree();
             ITool desk = new Desk();
+            ITool dog = new Dog();
 
             ITool swimmerCharacter = new SwimmerCharacter();
             ITool chefCharacter = new ChefCharacter();
@@ -83,6 +84,7 @@ namespace WeeToons
             chair.PanelContainer = this.panelGroupContainer;
             tree.PanelContainer = this.panelGroupContainer;
             desk.PanelContainer = this.panelGroupContainer;
+            dog.PanelContainer = this.panelGroupContainer;
 
             swimmerCharacter.PanelContainer = this.panelGroupContainer;
             chefCharacter.PanelContainer = this.panelGroupContainer;
@@ -108,6 +110,7 @@ namespace WeeToons
             propertyTool.AddTool(chair);
             propertyTool.AddTool(tree);
             propertyTool.AddTool(desk);
+            propertyTool.AddTool(dog);
 
             characterTool.AddTool(swimmerCharacter);
             characterTool.AddTool(chefCharacter);
