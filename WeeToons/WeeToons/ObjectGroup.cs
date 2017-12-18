@@ -10,6 +10,16 @@ namespace WeeToons
     {
        private List<KomikObject> objects;
 
+        public ObjectGroup()
+        {
+            this.objects = new List<KomikObject>();
+        }
+
+        public void Add(KomikObject obj)
+        {
+            this.objects.Add(obj);
+        }
+
         public override void Draw()
         {
             foreach(KomikObject obj in objects)
@@ -52,6 +62,22 @@ namespace WeeToons
                 }
             }
             return false;
+        }
+
+        public override void Select()
+        {
+            foreach (KomikObject obj in objects)
+            {
+                obj.Select();
+            }
+        }
+
+        public override void Deselect()
+        {
+            foreach (KomikObject obj in objects)
+            {
+                obj.Deselect();
+            }
         }
 
     }
