@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
+using WeeToons.KomikObjects;
 
-namespace WeeToons.Tools.Background_Tools
+namespace WeeToons.Tools.Property_Tools
 {
-    class ParkBackground : ToolStripMenuItem, ITool
+    class Ball : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
 
@@ -26,23 +27,23 @@ namespace WeeToons.Tools.Background_Tools
             }
         }
 
-        public ParkBackground()
+        public Ball()
         {
-            this.Text = "Park";
-            this.Name = "parkBackgroundToolStrip";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Background\park.jpg");
+            this.Text = "Ball";
+            this.Name = "ballToolStrip";
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Property\football.png");
             this.Click += new EventHandler(this.tool_Click);
-            this.Image = new Bitmap(@"..\..\..\Resources\Background\park.jpg");
         }
 
         public void tool_Click(object sender, EventArgs e)
         {
-            IPanel activePanel = this.panelContainer.ActivePanel;
-            if(activePanel != null)
+            IPanel panel = this.panelContainer.ActivePanel;
+            if (panel != null)
             {
-                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\park.jpg");
-                activePanel.SetBackground(backgroundImage);
+                BallProperty ball = new BallProperty();
+                panel.AddComicObject((KomikObject)ball);
             }
         }
     }
+   
 }

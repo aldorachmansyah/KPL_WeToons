@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using WeeToons.Interfaces;
 using WeeToons.Tools;
 using WeeToons.Tools.Background_Tools;
+using WeeToons.Tools.Property_Tools;
 using WeeToons.Tools.Bubble_Tools;
 using WeeToons.Tools.Character_Tools;
 using WeeToons.Tools.Panel_Tools;
@@ -33,11 +34,13 @@ namespace WeeToons
             IToolGroup panelTool = new PanelTool();
             IToolGroup backgroundTool = new BackgroundTool();
             IToolGroup characterTool = new CharacterTool();
+            IToolGroup propertyTool = new PropertyTool();
             IToolGroup bubbleTool = new BubbleTool();
 
             this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
             this.topToolStrip.Items.Add((ToolStripDropDownButton)backgroundTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)characterTool);
+            this.leftToolStrip.Items.Add((ToolStripDropDownButton)propertyTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)bubbleTool);
             #endregion
 
@@ -52,6 +55,14 @@ namespace WeeToons
             ITool kitchenBackground = new KitchenBackground();
             ITool bedroomBackground = new BedroomBackground();
             ITool studentCharacter = new StudentCharacter();
+
+            ITool chair = new Chair();
+            ITool tree = new Tree();
+            ITool desk = new Desk();
+            ITool dog = new Dog();
+            ITool foodstall = new FoodStall();
+            ITool ball = new Ball();
+
             ITool swimmerCharacter = new SwimmerCharacter();
             ITool chefCharacter = new ChefCharacter();
             ITool doctorCharacter = new DoctorCharacter();
@@ -71,6 +82,15 @@ namespace WeeToons
             kitchenBackground.PanelContainer = this.panelGroupContainer;
             bedroomBackground.PanelContainer = this.panelGroupContainer;
             studentCharacter.PanelContainer = this.panelGroupContainer;
+
+            chair.PanelContainer = this.panelGroupContainer;
+            tree.PanelContainer = this.panelGroupContainer;
+            desk.PanelContainer = this.panelGroupContainer;
+            dog.PanelContainer = this.panelGroupContainer;
+            foodstall.PanelContainer = this.panelGroupContainer;
+            ball.PanelContainer = this.panelGroupContainer;
+
+
             swimmerCharacter.PanelContainer = this.panelGroupContainer;
             chefCharacter.PanelContainer = this.panelGroupContainer;
             doctorCharacter.PanelContainer = this.panelGroupContainer;
@@ -79,6 +99,7 @@ namespace WeeToons
             leftroundBubble.PanelContainer = this.panelGroupContainer;
             leftboxBubble.PanelContainer = this.panelGroupContainer;
             rightboxBubble.PanelContainer = this.panelGroupContainer;
+
 
             panelTool.AddTool(onePanelLayout);
             panelTool.AddTool(twoPanelLayout);
@@ -90,6 +111,14 @@ namespace WeeToons
             backgroundTool.AddTool(kitchenBackground);
             backgroundTool.AddTool(bedroomBackground);
             characterTool.AddTool(studentCharacter);
+
+            propertyTool.AddTool(chair);
+            propertyTool.AddTool(tree);
+            propertyTool.AddTool(desk);
+            propertyTool.AddTool(dog);
+            propertyTool.AddTool(foodstall);
+            propertyTool.AddTool(ball);
+
             characterTool.AddTool(swimmerCharacter);
             characterTool.AddTool(chefCharacter);
             characterTool.AddTool(doctorCharacter);
@@ -98,6 +127,7 @@ namespace WeeToons
             bubbleTool.AddTool(leftroundBubble);
             bubbleTool.AddTool(leftboxBubble);
             bubbleTool.AddTool(rightboxBubble);
+
             #endregion
         }
         

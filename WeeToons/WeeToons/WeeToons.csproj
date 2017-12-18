@@ -61,6 +61,31 @@
     <Compile Include="Interfaces\IPanelContainer.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IToolGroup.cs" />
+    <Compile Include="KomikObjects\BallProperty.cs" />
+    <Compile Include="KomikObjects\ChairProperty.cs" />
+    <Compile Include="KomikObjects\DeskProperty.cs" />
+    <Compile Include="KomikObjects\DogProperty.cs" />
+    <Compile Include="KomikObjects\FoodStallProperty.cs" />
+    <Compile Include="KomikObjects\StudentProperty.cs" />
+    <Compile Include="KomikObjects\TreeProperty.cs" />
+    <Compile Include="Tools\Property Tools\Ball.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Property Tools\Chair.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Property Tools\Desk.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Property Tools\Dog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Property Tools\FoodStall.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Property Tools\PropertyTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="KomikObjects\BasketProperty.cs" />
     <Compile Include="KomikObjects\ChefProperty.cs" />
     <Compile Include="KomikObjects\DoctorProperty.cs" />
@@ -68,7 +93,6 @@
     <Compile Include="KomikObjects\LeftBoxProperty.cs" />
     <Compile Include="KomikObjects\LeftRoundProperty.cs" />
     <Compile Include="KomikObjects\RightBoxProperty.cs" />
-    <Compile Include="KomikObjects\StudentProperty.cs" />
     <Compile Include="KomikObjects\SwimmerProperty.cs" />
     <Compile Include="Tools\Background Tools\BackgroundTool.cs">
       <SubType>Component</SubType>
@@ -119,7 +143,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\FourPanelLayout.cs">
-	  <SubType>Component</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Character Tools\SwimmerCharacter.cs">
       <SubType>Component</SubType>
@@ -128,6 +152,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\PanelTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Property Tools\Tree.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\ThreePanelLayout.cs">
