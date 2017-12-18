@@ -75,6 +75,9 @@
     <Compile Include="Tools\Character Tools\CharacterTool.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Panel Tools\FourPanelLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Panel Tools\OnePanelLayout.cs">
       <SubType>Component</SubType>
     </Compile>
