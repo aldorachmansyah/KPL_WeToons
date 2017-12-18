@@ -95,6 +95,27 @@ namespace WeeToons
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
+        public ITool GetActiveTool()
+        {
+            return this.GetActiveTool();
+           // throw new NotImplementedException();
+        }
+
+        public void SetActiveTool(ITool tool)
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void SetBackgroundColor(Color color)
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void DeselectAllObjects()
+        {
+            //throw new NotImplementedException();
+        }
+
         /* public void AddDrawingObject(KomikObject drawingObject)
          {
              throw new NotImplementedException();

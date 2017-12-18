@@ -10,10 +10,10 @@ namespace WeeToons
         private List<ICanvas> canvases;
         private ICanvas selectedCanvas;
 
-        // private IToolbox toolbox;
+        private IToolbox toolbox;
 
-        /* public IToolbox Toolbox
-         {
+        public IToolbox Toolbox
+        {
              get
              {
                  return this.toolbox;
@@ -23,7 +23,7 @@ namespace WeeToons
              {
                  this.toolbox = value;
              }
-         }*/
+        }
 
         public DefaultEditor()
         {

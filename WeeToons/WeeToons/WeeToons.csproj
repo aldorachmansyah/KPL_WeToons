@@ -53,8 +53,16 @@
     <Compile Include="DefaultEditor.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DefaultToolbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ICanvas.cs" />
     <Compile Include="IEditor.cs" />
+    <Compile Include="ITool.cs" />
+    <Compile Include="IToolbox.cs" />
+    <Compile Include="SelectionTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WeetoonsForm.cs">
       <SubType>Form</SubType>
     </Compile>

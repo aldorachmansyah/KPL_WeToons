@@ -8,7 +8,7 @@ namespace WeeToons
 {
     public interface IEditor
     {
-       // IToolbox Toolbox { get; set; }
+        IToolbox Toolbox { get; set; }
         void AddCanvas(ICanvas canvas);
         void SelectCanvas(ICanvas canvas);
         ICanvas GetSelectedCanvas();

@@ -19,7 +19,7 @@ namespace WeeToons
         Image targetImage;
         int height;
         int width;
-      //  private IToolbox toolbox;
+        private IToolbox toolbox;
         private IEditor editor;
         //private IToolbar toolbar;
         //private IMenubar menubar;
@@ -39,6 +39,43 @@ namespace WeeToons
             this.pictureBox1.Controls.Add((Control)this.editor);
             #endregion
 
+            #region Toolbox
+
+            // Initializing toolbox
+            Debug.WriteLine("Loading toolbox...");
+            this.toolbox = new DefaultToolbox();
+            this.toolStripContainer1.Dock = DockStyle.Right;
+            this.toolStripContainer1.RightToolStripPanel.Controls.Add((Control)this.toolbox);
+            this.editor.Toolbox = toolbox;
+
+            #endregion
+
+            #region Tools
+
+            // Initializing tools
+            Debug.WriteLine("Loading tools...");
+            this.toolbox.AddTool(new SelectionTool());
+            this.toolbox.ToolSelected += Toolbox_ToolSelected;
+
+
+
+            #endregion
+
+        }
+
+        private void Toolbox_ToolSelected(ITool tool)
+        {
+            if (this.editor != null)
+            {
+                Debug.WriteLine("Tool " + tool.Name + " is selected");
+                ICanvas canvas = this.editor.GetSelectedCanvas();
+                if(canvas != null)
+                {
+                    canvas.SetActiveTool(tool);
+                    tool.TargetCanvas = canvas;
+                }
+      
+            }
         }
 
         private void onePanelToolStrip_Click(object sender, EventArgs e)
@@ -216,6 +253,11 @@ namespace WeeToons
             height = targetImage.Height + 10;
             width = targetImage.Width + 10;
             pictureBox1.Image = ResizeNow(width, height);
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
