@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
 using WeeToons.Tools.Background_Tools;
+using WeeToons.Tools.Bubble_Tools;
 using WeeToons.Tools.Character_Tools;
 
 namespace WeeToons
@@ -13,6 +14,7 @@ namespace WeeToons
         private List<IPanel> panels;
         private IPanel panelActive;
         private IPanelContainer panelGroupContainer;
+        private ToolStripDropDownButton bubbleTool;
 
         public WeeToonsForm()
         {
@@ -32,10 +34,12 @@ namespace WeeToons
             IToolGroup panelTool = new PanelTool();
             IToolGroup backgroundTool = new BackgroundTool();
             IToolGroup characterTool = new CharacterTool();
+            IToolGroup bubbleTool = new BubbleTool();
 
             this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
             this.topToolStrip.Items.Add((ToolStripDropDownButton)backgroundTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)characterTool);
+            this.leftToolStrip.Items.Add((ToolStripDropDownButton)bubbleTool);
             #endregion
 
             #region TOOLS

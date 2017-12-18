@@ -74,6 +74,9 @@
     <Compile Include="Tools\Background Tools\ParkBackground.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Bubble Tools\BubbleTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Character Tools\BasketCharacter.cs">
       <SubType>Component</SubType>
     </Compile>

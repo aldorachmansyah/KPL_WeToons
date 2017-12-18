@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using WeeToons.Interfaces;
 using WeeToons.KomikObjects;
 
-namespace WeeToons.Tools.Background_Tools
+namespace WeeToons.Tools.Character_Tools
 {
     class StudentCharacter : ToolStripMenuItem, ITool
     {
