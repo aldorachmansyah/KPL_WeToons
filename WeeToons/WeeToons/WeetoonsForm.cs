@@ -184,7 +184,6 @@ namespace WeeToons
             ICanvas canvas = this.editor.GetSelectedCanvas();
             if( canvas != null)
             {
-                Point canvaslocation = canvas.GetCanvasLocation();
                 Benda happyboy = new Benda();
                 string filePath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\"), "Resources\\Icon\\cursor.png");
                 happyboy.url = filePath;
