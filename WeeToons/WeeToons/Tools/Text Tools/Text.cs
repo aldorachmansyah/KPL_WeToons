@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace WeeToons.Tools.Text_Tools
     class Text : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
+        public string Value{get; set;}
 
         public IPanelContainer PanelContainer
         {
@@ -29,9 +31,9 @@ namespace WeeToons.Tools.Text_Tools
 
         public Text()
         {
-            this.Text = "Ball";
-            this.Name = "ballToolStrip";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Property\football.png");
+            this.Text = "Text";
+            this.Name = "textToolStrip";
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Icon\text.png");
             this.Click += new EventHandler(this.tool_Click);
         }
 
@@ -40,8 +42,12 @@ namespace WeeToons.Tools.Text_Tools
             IPanel panel = this.panelContainer.ActivePanel;
             if (panel != null)
             {
-                BallProperty ball = new BallProperty();
-                panel.AddComicObject((KomikObject)ball);
+                string input;
+                //text.Value = input;
+                TextProperty text = new TextProperty();
+                input = Microsoft.VisualBasic.Interaction.InputBox("Input Text", "Text Box", "", 500, 300);
+                Debug.WriteLine("masuk");
+                panel.AddComicObject((KomikObject)text);
             }
         }
     }

@@ -29,7 +29,7 @@ namespace WeeToons.Tools.Property_Tools
 
         public Chair()
         {
-            this.Text = "Desk";
+            this.Text = "Chair";
             this.Name = "deskToolStrip";
             this.Image = Bitmap.FromFile(@"..\..\..\Resources\Property\chair.png");
             this.Click += new EventHandler(this.tool_Click);

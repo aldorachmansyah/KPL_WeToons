@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics;
 
 namespace WeeToons.Tools.Property_Tools
 {
@@ -15,7 +14,6 @@ namespace WeeToons.Tools.Property_Tools
             this.Name = "propertyToolStrip";
             this.Text = "Property";
             this.Image = Bitmap.FromFile(@"..\..\..\Resources\Icon\property.png");
-            Debug.WriteLine("masuk");
         }
     }
 }
