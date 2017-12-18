@@ -64,6 +64,7 @@
     <Compile Include="Interfaces\IToolGroup.cs" />
     <Compile Include="KomikObjects\ChairProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
+    <Compile Include="KomikObjects\TreeProperty.cs" />
     <Compile Include="Tools\Property Tools\Chair.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -86,6 +87,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\PanelTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Property Tools\Tree.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Selection Tools\SelectionTool.cs" />
