@@ -62,7 +62,9 @@ namespace WeeToons
             this.KeyDown += Canvas_KeyDown;
             this.KeyUp += Canvas_KeyUp;
             this.PreviewKeyDown += Canvas_PreviewKeyDown;
+
         }
+
 
         public void ChangeBorder(BorderStyle borderStyle)
         {
@@ -100,6 +102,7 @@ namespace WeeToons
 
         private void Canvas_KeyDown(object sender, KeyEventArgs e)
         {
+            
         }
 
         private void Canvas_MouseMove(object sender, MouseEventArgs e)

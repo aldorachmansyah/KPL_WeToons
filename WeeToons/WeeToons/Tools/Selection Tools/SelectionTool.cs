@@ -47,11 +47,17 @@ namespace WeeToons.Tools.Selection_Tools
             IPanel panel = this.panelContainer.ActivePanel;
             if (e.Button == MouseButtons.Left && panel != null)
             {
-                panel.DeselectAllObjects();
+                if (Form.ModifierKeys != Keys.Control)
+                {
+                   // Debug.Write("wow");
+                    panel.DeselectAllObjects();
+                }
                 selectedObject = panel.SelectObjectAt(e.X, e.Y);
+
             }
 
         }
+
 
         public void ToolMouseMove(object sender, MouseEventArgs e)
         {

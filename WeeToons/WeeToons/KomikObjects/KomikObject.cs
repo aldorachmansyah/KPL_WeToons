@@ -33,12 +33,12 @@ namespace WeeToons
 
         private State state;
 
-        public void Select()
+        public virtual void Select()
         {
             this.state.Select(this);
         }
 
-        public void Deselect()
+        public virtual void Deselect()
         {
             this.state.Deselect(this);
         }
