@@ -8,9 +8,9 @@ namespace WeeToons
 {
     public class PreviewState : State
     {
-       /* private static State instance;
+        private static State instance;
 
-        private static State GetInstance()
+        public static State GetInstance()
         {
             if (instance == null)
             {
@@ -28,6 +28,6 @@ namespace WeeToons
         {
             obj.ChangeState(ActiveState.GetInstance());
         }
-        */
+       
     }
 }

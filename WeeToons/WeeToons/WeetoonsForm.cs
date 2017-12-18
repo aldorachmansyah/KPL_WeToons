@@ -184,8 +184,6 @@ namespace WeeToons
             this.pictureBox1.Image = imageBox;
 
             pictureBox1.BackColor = Color.Transparent;
-
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

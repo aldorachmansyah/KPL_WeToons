@@ -8,9 +8,9 @@ namespace WeeToons
 {
     public class ActiveState : State
     {
-        /*private static State instance;
+        private static State instance;
 
-        private static State GetInstance()
+        public static State GetInstance()
         {
             if (instance == null)
             {
@@ -27,6 +27,6 @@ namespace WeeToons
         public override void Deselect(KomikObject obj)
         {
             obj.ChangeState(StaticState.GetInstance());
-        }*/
+        }
     }
 }
