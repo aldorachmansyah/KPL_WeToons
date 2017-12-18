@@ -66,6 +66,7 @@
     <Compile Include="KomikObjects\ChefProperty.cs" />
     <Compile Include="KomikObjects\DoctorProperty.cs" />
     <Compile Include="KomikObjects\GrandfatherProperty.cs" />
+    <Compile Include="KomikObjects\LeftRoundProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
     <Compile Include="KomikObjects\SwimmerProperty.cs" />
     <Compile Include="Tools\Background Tools\BackgroundTool.cs">
@@ -75,6 +76,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Bubble Tools\BubbleTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Bubble Tools\LeftRoundBubble.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Character Tools\BasketCharacter.cs">
