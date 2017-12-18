@@ -46,6 +46,7 @@ namespace WeeToons
         {
             this.comicObjects = new List<KomikObject>();
             this.selectionTool = new SelectionTool();
+            this.DoubleBuffered = true;
 
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BorderStyle = BorderStyle.FixedSingle;

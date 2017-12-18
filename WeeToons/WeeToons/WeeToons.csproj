@@ -62,7 +62,12 @@
     <Compile Include="Interfaces\IPanelContainer.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IToolGroup.cs" />
+    <Compile Include="KomikObjects\BasketProperty.cs" />
+    <Compile Include="KomikObjects\ChefProperty.cs" />
+    <Compile Include="KomikObjects\DoctorProperty.cs" />
+    <Compile Include="KomikObjects\GrandfatherProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
+    <Compile Include="KomikObjects\SwimmerProperty.cs" />
     <Compile Include="Tools\Background Tools\BackgroundTool.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -81,6 +86,18 @@
     <Compile Include="Tools\Background Tools\ParkBackground.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Character Tools\BasketCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\ChefCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\DoctorCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Character Tools\GrandfatherCharacter.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Character Tools\StudentCharacter.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -88,6 +105,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\FourPanelLayout.cs">
+    <Compile Include="Tools\Character Tools\SwimmerCharacter.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\OnePanelLayout.cs">

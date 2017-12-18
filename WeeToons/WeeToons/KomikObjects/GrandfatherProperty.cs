@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace WeeToons.KomikObjects
 {
-    class StudentProperty : KomikObject
+    class GrandfatherProperty : KomikObject
     {
-        public StudentProperty()
+        public GrandfatherProperty()
         {
             this.Width = 256;
             this.Height = 256;
             this.X = 120;
             this.Y = 50;
-            this.PropertyPath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\"), "Resources\\Character\\student.png");
+            this.PropertyPath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\"), "Resources\\Character\\grandfather.png");
         }
     }
 }
