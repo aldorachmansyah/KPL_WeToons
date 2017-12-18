@@ -62,10 +62,19 @@
     <Compile Include="Interfaces\IPanelContainer.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IToolGroup.cs" />
+    <Compile Include="Tools\Background Tools\BackgroundTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Background Tools\ParkBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Panel Tools\OnePanelLayout.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\PanelTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolDropdownObject.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WeetoonsForm.cs">
@@ -108,6 +117,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tools\Panel Tools\park.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

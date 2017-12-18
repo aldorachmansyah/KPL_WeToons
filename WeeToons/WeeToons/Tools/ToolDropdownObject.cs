@@ -1,39 +1,41 @@
 ﻿using System;
-using System.Drawing;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
 
-namespace WeeToons
+namespace WeeToons.Tools
 {
-    class DefaultToolGroup : ToolStrip, IToolGroup
+    public abstract class ToolDropDownObject: ToolStripDropDownButton, IToolGroup
     {
-        
         public void AddSeparator()
         {
-            this.Items.Add(new ToolStripSeparator());
+            this.DropDownItems.Add(new ToolStripSeparator());
         }
 
         public void AddTool(ITool tool)
         {
-            ToolStripItem toolstripItem = (ToolStripItem)tool;
-            this.Items.Add(toolstripItem);
+
+            this.DropDownItems.Add((ToolStripItem)tool);
         }
 
         public void AddToolGroup(IToolGroup toolGroup)
         {
             ToolStripItem toolstripItem = (ToolStripItem)toolGroup;
-            this.Items.Add(toolstripItem);
+            this.DropDownItems.Add(toolstripItem);
         }
 
         public void RemoveTool(ITool tool)
         {
-            foreach (ToolStripItem item in this.Items)
+            foreach (ToolStripItem item in this.DropDownItems)
             {
                 if (item is ITool)
                 {
                     if (item.Equals(tool))
                     {
-                        this.Items.Remove(item);
+                        this.DropDownItems.Remove(item);
                     }
                 }
             }

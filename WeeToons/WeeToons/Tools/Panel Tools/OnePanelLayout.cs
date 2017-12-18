@@ -26,7 +26,6 @@ namespace WeeToons
         {
             this.Text = "1 Panel";
             this.Name = "onePanelToolStrip";
-            this.Size = new System.Drawing.Size(118, 22);
             this.Click += new EventHandler(this.tool_Click);
         }
 

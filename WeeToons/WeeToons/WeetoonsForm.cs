@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
+using WeeToons.Tools.Background_Tools;
 
 namespace WeeToons
 {
@@ -27,15 +22,29 @@ namespace WeeToons
 
         public void InitUI()
         {
+            #region CONTAINER
             this.panelGroupContainer = new DefaultPanelContainer();
             this.Controls.Add((GroupBox)panelGroupContainer);
+            #endregion
 
+            #region TOOL DROPDOWN
             IToolGroup panelTool = new PanelTool();
-            ITool onePanelLayout = new OnePanelLayout();
-            onePanelLayout.PanelContainer = this.panelGroupContainer;
-            panelTool.AddTool(onePanelLayout);
+            IToolGroup backgroundTool = new BackgroundTool();
+
             this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
-            //panelTool.Image = ((Image)(resources.GetObject("paneltoolStrip.Image")));
+            this.topToolStrip.Items.Add((ToolStripDropDownButton)backgroundTool);
+            #endregion
+
+            #region TOOLS
+            ITool onePanelLayout = new OnePanelLayout();
+            ITool parkBackground = new ParkBackground();
+
+            onePanelLayout.PanelContainer = this.panelGroupContainer;
+            parkBackground.PanelContainer = this.panelGroupContainer;
+
+            panelTool.AddTool(onePanelLayout);
+            backgroundTool.AddTool(parkBackground);
+            #endregion
         }
 
         //private void onePanelToolStrip_Click(object sender, EventArgs e)
