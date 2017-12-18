@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WeeToons
 {
-    class Canvas
+    class Canvas : FlowLayoutPanel, ICanvas
     {
-<<<<<<< HEAD
-=======
 
-      //  private ITool activeTool;
-       // private List<KomikObject> drawingObjects;
+        //  private ITool activeTool;
+        // private List<KomikObject> drawingObjects;
 
         public Canvas(int xPosition, int yPosition, int width, int height)
         {
-            Init(xPosition,yPosition,width,height);
+            Init(xPosition, yPosition, width, height);
         }
 
         private void Init(int xPosition, int yPosition, int width, int height)
         {
-           // this.drawingObjects = new List<KomikObject>();
+            // this.drawingObjects = new List<KomikObject>();
             this.DoubleBuffered = true;
             this.BackColor = Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -69,7 +69,7 @@ namespace WeeToons
 
         private void Canvas_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
 
@@ -98,7 +98,7 @@ namespace WeeToons
         public ITool GetActiveTool()
         {
             return this.GetActiveTool();
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public void SetActiveTool(ITool tool)
@@ -120,43 +120,33 @@ namespace WeeToons
          {
              throw new NotImplementedException();
          }
-
          public void DeselectAllObjects()
          {
              throw new NotImplementedException();
          }
-
          public ITool GetActiveTool()
          {
              throw new NotImplementedException();
          }
-
          public KomikObject GetObjectAt(int x, int y)
          {
              throw new NotImplementedException();
          }
-
          public void RemoveDrawingObject(KomikObject drawingObject)
          {
              throw new NotImplementedException();
          }
-
-
-
          public KomikObject SelectObjectAt(int x, int y)
          {
              throw new NotImplementedException();
          }
-
          public void SetActiveTool(ITool tool)
          {
              throw new NotImplementedException();
          }
-
          public void SetBackgroundColor(Color color)
          {
              throw new NotImplementedException();
          }*/
->>>>>>> cd5a23864417c3949bb8b40c4e1e591551afc650
     }
 }
