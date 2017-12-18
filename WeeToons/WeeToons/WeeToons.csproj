@@ -64,6 +64,7 @@
     <Compile Include="KomikObjects\ChairProperty.cs" />
     <Compile Include="KomikObjects\DeskProperty.cs" />
     <Compile Include="KomikObjects\DogProperty.cs" />
+    <Compile Include="KomikObjects\FoodStallProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
     <Compile Include="KomikObjects\TreeProperty.cs" />
     <Compile Include="Tools\Property Tools\Chair.cs">
@@ -73,6 +74,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Property Tools\Dog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Property Tools\FoodStall.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Property Tools\PropertyTool.cs">
