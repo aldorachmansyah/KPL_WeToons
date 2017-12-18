@@ -62,12 +62,7 @@ namespace WeeToons
             this.KeyDown += Canvas_KeyDown;
             this.KeyUp += Canvas_KeyUp;
             this.PreviewKeyDown += Canvas_PreviewKeyDown;
-<<<<<<< HEAD
-      
-=======
-            
 
->>>>>>> 4626d3cb8a5ea7a1cc79f32052258b7011f3c7ef
         }
 
 
