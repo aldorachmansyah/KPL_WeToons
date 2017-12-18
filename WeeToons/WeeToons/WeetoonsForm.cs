@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using WeeToons.Interfaces;
 using WeeToons.Tools;
 using WeeToons.Tools.Background_Tools;
+using WeeToons.Tools.Bubble_Tools;
 using WeeToons.Tools.Character_Tools;
 using WeeToons.Tools.Panel_Tools;
 
@@ -13,6 +14,7 @@ namespace WeeToons
     public partial class WeeToonsForm : Form
     {
         private IPanelContainer panelGroupContainer;
+        private ToolStripDropDownButton bubbleTool;
 
         public WeeToonsForm()
         {
@@ -31,10 +33,12 @@ namespace WeeToons
             IToolGroup panelTool = new PanelTool();
             IToolGroup backgroundTool = new BackgroundTool();
             IToolGroup characterTool = new CharacterTool();
+            IToolGroup bubbleTool = new BubbleTool();
 
             this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
             this.topToolStrip.Items.Add((ToolStripDropDownButton)backgroundTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)characterTool);
+            this.leftToolStrip.Items.Add((ToolStripDropDownButton)bubbleTool);
             #endregion
 
             #region TOOLS
@@ -53,6 +57,9 @@ namespace WeeToons
             ITool doctorCharacter = new DoctorCharacter();
             ITool grandfatherCharacter = new GrandfatherCharacter();
             ITool basketCharacter = new BasketCharacter();
+            ITool leftroundBubble = new LeftRoundBubble();
+            ITool leftboxBubble = new LeftBoxBubble();
+            ITool rightboxBubble = new RightBoxBubble();
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
             twoPanelLayout.PanelContainer = this.panelGroupContainer;
@@ -69,6 +76,9 @@ namespace WeeToons
             doctorCharacter.PanelContainer = this.panelGroupContainer;
             grandfatherCharacter.PanelContainer = this.panelGroupContainer;
             basketCharacter.PanelContainer = this.panelGroupContainer;
+            leftroundBubble.PanelContainer = this.panelGroupContainer;
+            leftboxBubble.PanelContainer = this.panelGroupContainer;
+            rightboxBubble.PanelContainer = this.panelGroupContainer;
 
             panelTool.AddTool(onePanelLayout);
             panelTool.AddTool(twoPanelLayout);
@@ -85,6 +95,9 @@ namespace WeeToons
             characterTool.AddTool(doctorCharacter);
             characterTool.AddTool(grandfatherCharacter);
             characterTool.AddTool(basketCharacter);
+            bubbleTool.AddTool(leftroundBubble);
+            bubbleTool.AddTool(leftboxBubble);
+            bubbleTool.AddTool(rightboxBubble);
             #endregion
         }
         
