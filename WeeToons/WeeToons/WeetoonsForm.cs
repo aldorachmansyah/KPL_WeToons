@@ -52,6 +52,8 @@ namespace WeeToons
             ITool grandfatherCharacter = new GrandfatherCharacter();
             ITool basketCharacter = new BasketCharacter();
             ITool leftroundBubble = new LeftRoundBubble();
+            ITool leftboxBubble = new LeftBoxBubble();
+            ITool rightboxBubble = new RightBoxBubble();
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
             parkBackground.PanelContainer = this.panelGroupContainer;
@@ -62,6 +64,8 @@ namespace WeeToons
             grandfatherCharacter.PanelContainer = this.panelGroupContainer;
             basketCharacter.PanelContainer = this.panelGroupContainer;
             leftroundBubble.PanelContainer = this.panelGroupContainer;
+            leftboxBubble.PanelContainer = this.panelGroupContainer;
+            rightboxBubble.PanelContainer = this.panelGroupContainer;
 
             panelTool.AddTool(onePanelLayout);
             backgroundTool.AddTool(parkBackground);
@@ -72,6 +76,8 @@ namespace WeeToons
             characterTool.AddTool(grandfatherCharacter);
             characterTool.AddTool(basketCharacter);
             bubbleTool.AddTool(leftroundBubble);
+            bubbleTool.AddTool(leftboxBubble);
+            bubbleTool.AddTool(rightboxBubble);
             #endregion
         }
 
