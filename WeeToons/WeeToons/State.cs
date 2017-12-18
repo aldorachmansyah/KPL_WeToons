@@ -8,7 +8,7 @@ namespace WeeToons
 {
     public abstract class State
     {
-       /* public State WeState
+        public State WeState
         {
             get
             {
@@ -28,6 +28,6 @@ namespace WeeToons
         public virtual void Select(KomikObject obj)
         {
             //default implementation, no state transition
-        }*/
+        }
     }
 }
