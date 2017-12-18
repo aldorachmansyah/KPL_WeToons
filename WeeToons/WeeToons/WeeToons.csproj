@@ -164,6 +164,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Selection Tools\SelectionTool.cs" />
+    <Compile Include="Tools\Text Tools\TextTools.cs" />
     <Compile Include="Tools\ToolDropdownObject.cs">
       <SubType>Component</SubType>
     </Compile>
