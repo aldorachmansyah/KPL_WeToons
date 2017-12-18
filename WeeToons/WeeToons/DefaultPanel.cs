@@ -25,7 +25,7 @@ namespace WeeToons
             }
         }
 
-        public DefaultPanel(WeeToonsForm weeToonsForm, int xPosition, int yPosition, int width, int height, string panelName = "Unknown Panel")
+        public DefaultPanel(int xPosition, int yPosition, int width, int height, string panelName = "Unknown Panel")
         {
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BorderStyle = BorderStyle.FixedSingle;
@@ -33,8 +33,6 @@ namespace WeeToons
             this.Name = panelName;
             this.Size = new System.Drawing.Size(height, width);
             this.TabIndex = 2;
-            this.Click += new System.EventHandler(weeToonsForm.panel_Click);
-            weeToonsForm.AddPanels(this);
         }
 
         public void ChangeBorder(BorderStyle borderStyle)

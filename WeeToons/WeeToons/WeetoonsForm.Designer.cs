@@ -31,21 +31,8 @@ namespace WeeToons
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeeToonsForm));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panelToolStrip = new System.Windows.Forms.ToolStripDropDownButton();
-            this.onePanelToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.twoPanelToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.threePanelToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.fourPanelToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.backgroundToolStrip = new System.Windows.Forms.ToolStripDropDownButton();
-            this.indoorBackgroundToolstrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.classroomBackgroundToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.bedroomBackgroundToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.kitchenBackgroundToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.outdoorBackgroundToolstrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.parkBackgroundToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.beachBackgroundToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.topToolStrip = new System.Windows.Forms.ToolStrip();
+            this.leftToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.boyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.happyBoyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,133 +62,23 @@ namespace WeeToons
             this.rectangleBubbleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
+            this.leftToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // topToolStrip
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.panelToolStrip,
-            this.backgroundToolStrip});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(721, 37);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.topToolStrip.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.topToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.topToolStrip.Name = "topToolStrip";
+            this.topToolStrip.Size = new System.Drawing.Size(721, 25);
+            this.topToolStrip.TabIndex = 0;
+            this.topToolStrip.Text = "toolStrip1";
             // 
-            // panelToolStrip
+            // leftToolStrip
             // 
-            this.panelToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.onePanelToolStrip,
-            this.twoPanelToolStrip,
-            this.threePanelToolStrip,
-            this.fourPanelToolStrip});
-            this.panelToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("panelToolStrip.Image")));
-            this.panelToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.panelToolStrip.Name = "panelToolStrip";
-            this.panelToolStrip.Size = new System.Drawing.Size(79, 34);
-            this.panelToolStrip.Text = "Panel";
-            // 
-            // onePanelToolStrip
-            // 
-            this.onePanelToolStrip.Name = "onePanelToolStrip";
-            this.onePanelToolStrip.Size = new System.Drawing.Size(112, 22);
-            this.onePanelToolStrip.Text = "1 Panel";
-            this.onePanelToolStrip.Click += new System.EventHandler(this.onePanelToolStrip_Click);
-            // 
-            // twoPanelToolStrip
-            // 
-            this.twoPanelToolStrip.Name = "twoPanelToolStrip";
-            this.twoPanelToolStrip.Size = new System.Drawing.Size(112, 22);
-            this.twoPanelToolStrip.Text = "2 Panel";
-            this.twoPanelToolStrip.Click += new System.EventHandler(this.twoPanelToolStrip_Click);
-            // 
-            // threePanelToolStrip
-            // 
-            this.threePanelToolStrip.Name = "threePanelToolStrip";
-            this.threePanelToolStrip.Size = new System.Drawing.Size(112, 22);
-            this.threePanelToolStrip.Text = "3 Panel";
-            this.threePanelToolStrip.Click += new System.EventHandler(this.threePanelToolStrip_Click);
-            // 
-            // fourPanelToolStrip
-            // 
-            this.fourPanelToolStrip.Name = "fourPanelToolStrip";
-            this.fourPanelToolStrip.Size = new System.Drawing.Size(112, 22);
-            this.fourPanelToolStrip.Text = "4 Panel";
-            this.fourPanelToolStrip.Click += new System.EventHandler(this.fourPanelToolStrip_Click);
-            // 
-            // backgroundToolStrip
-            // 
-            this.backgroundToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.indoorBackgroundToolstrip,
-            this.outdoorBackgroundToolstrip});
-            this.backgroundToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("backgroundToolStrip.Image")));
-            this.backgroundToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.backgroundToolStrip.Name = "backgroundToolStrip";
-            this.backgroundToolStrip.Size = new System.Drawing.Size(114, 34);
-            this.backgroundToolStrip.Text = "Background";
-            // 
-            // indoorBackgroundToolstrip
-            // 
-            this.indoorBackgroundToolstrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.classroomBackgroundToolStrip,
-            this.bedroomBackgroundToolStrip,
-            this.kitchenBackgroundToolStrip});
-            this.indoorBackgroundToolstrip.Name = "indoorBackgroundToolstrip";
-            this.indoorBackgroundToolstrip.Size = new System.Drawing.Size(152, 22);
-            this.indoorBackgroundToolstrip.Text = "Indoor";
-            // 
-            // classroomBackgroundToolStrip
-            // 
-            this.classroomBackgroundToolStrip.Name = "classroomBackgroundToolStrip";
-            this.classroomBackgroundToolStrip.Size = new System.Drawing.Size(152, 22);
-            this.classroomBackgroundToolStrip.Text = "Classroom";
-            this.classroomBackgroundToolStrip.Click += new System.EventHandler(this.classroomBackgroundToolStrip_Click);
-            // 
-            // bedroomBackgroundToolStrip
-            // 
-            this.bedroomBackgroundToolStrip.Name = "bedroomBackgroundToolStrip";
-            this.bedroomBackgroundToolStrip.Size = new System.Drawing.Size(152, 22);
-            this.bedroomBackgroundToolStrip.Text = "Bedroom";
-            this.bedroomBackgroundToolStrip.Click += new System.EventHandler(this.bedroomBackgroundToolStrip_Click);
-            // 
-            // kitchenBackgroundToolStrip
-            // 
-            this.kitchenBackgroundToolStrip.Name = "kitchenBackgroundToolStrip";
-            this.kitchenBackgroundToolStrip.Size = new System.Drawing.Size(152, 22);
-            this.kitchenBackgroundToolStrip.Text = "Kitchen";
-            this.kitchenBackgroundToolStrip.Click += new System.EventHandler(this.kitchenBackgroundToolStrip_Click);
-            // 
-            // outdoorBackgroundToolstrip
-            // 
-            this.outdoorBackgroundToolstrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.parkBackgroundToolStrip,
-            this.beachBackgroundToolStrip});
-            this.outdoorBackgroundToolstrip.Name = "outdoorBackgroundToolstrip";
-            this.outdoorBackgroundToolstrip.Size = new System.Drawing.Size(152, 22);
-            this.outdoorBackgroundToolstrip.Text = "Outdoor";
-            // 
-            // parkBackgroundToolStrip
-            // 
-            this.parkBackgroundToolStrip.Name = "parkBackgroundToolStrip";
-            this.parkBackgroundToolStrip.Size = new System.Drawing.Size(106, 22);
-            this.parkBackgroundToolStrip.Text = "Park";
-            this.parkBackgroundToolStrip.Click += new System.EventHandler(this.parkBackgroundToolStrip_Click);
-            // 
-            // beachBackgroundToolStrip
-            // 
-            this.beachBackgroundToolStrip.Name = "beachBackgroundToolStrip";
-            this.beachBackgroundToolStrip.Size = new System.Drawing.Size(106, 22);
-            this.beachBackgroundToolStrip.Text = "Beach";
-            this.beachBackgroundToolStrip.Click += new System.EventHandler(this.beachToolStripMenuItem_Click);
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(30, 30);
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.leftToolStrip.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftToolStrip.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.leftToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton3,
@@ -209,12 +86,12 @@ namespace WeeToons
             this.toolStripDropDownButton4,
             this.toolStripSeparator2,
             this.toolStripDropDownButton5});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 37);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip2.Size = new System.Drawing.Size(44, 665);
-            this.toolStrip2.TabIndex = 1;
-            this.toolStrip2.Text = "toolStrip2";
+            this.leftToolStrip.Location = new System.Drawing.Point(0, 25);
+            this.leftToolStrip.Name = "leftToolStrip";
+            this.leftToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.leftToolStrip.Size = new System.Drawing.Size(44, 677);
+            this.leftToolStrip.TabIndex = 1;
+            this.leftToolStrip.Text = "toolStrip2";
             // 
             // toolStripDropDownButton1
             // 
@@ -432,14 +309,12 @@ namespace WeeToons
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 702);
-            this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.leftToolStrip);
+            this.Controls.Add(this.topToolStrip);
             this.Name = "WeeToonsForm";
             this.Text = "WeeToons";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
+            this.leftToolStrip.ResumeLayout(false);
+            this.leftToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,12 +322,9 @@ namespace WeeToons
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripDropDownButton panelToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem onePanelToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem twoPanelToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem threePanelToolStrip;
-        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.ComponentModel.ComponentResourceManager resources;
+        private System.Windows.Forms.ToolStrip topToolStrip;
+        private System.Windows.Forms.ToolStrip leftToolStrip;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem boyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem happyBoyToolStripMenuItem;
@@ -475,14 +347,6 @@ namespace WeeToons
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripDropDownButton backgroundToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem indoorBackgroundToolstrip;
-        private System.Windows.Forms.ToolStripMenuItem classroomBackgroundToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem bedroomBackgroundToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem kitchenBackgroundToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem outdoorBackgroundToolstrip;
-        private System.Windows.Forms.ToolStripMenuItem parkBackgroundToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem beachBackgroundToolStrip;
         private System.Windows.Forms.ToolStripMenuItem treeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roundBubbleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rectangleBubbleToolStripMenuItem;
@@ -492,7 +356,6 @@ namespace WeeToons
         private System.Windows.Forms.ToolStripButton toolStripDropDownButton5;
         private System.Windows.Forms.FlowLayoutPanel activePanel;
         private List<System.Windows.Forms.FlowLayoutPanel> panelGroup = new List<System.Windows.Forms.FlowLayoutPanel>();
-        private System.Windows.Forms.ToolStripMenuItem fourPanelToolStrip;
     }
 }
 

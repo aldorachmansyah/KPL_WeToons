@@ -16,52 +16,61 @@ namespace WeeToons
     {
         private List<IPanel> panels;
         private IPanel panelActive;
+        private IPanelContainer panelGroupContainer;
 
         public WeeToonsForm()
         {
             panels = new List<IPanel>();
             InitializeComponent();
+            InitUI();
         }
 
-        public void AddPanels(IPanel panel)
+        public void InitUI()
         {
-            this.Controls.Add((FlowLayoutPanel)panel);
-            this.panels.Add(panel);
+            this.panelGroupContainer = new DefaultPanelContainer();
+            this.Controls.Add((GroupBox)panelGroupContainer);
+
+            IToolGroup panelTool = new PanelTool();
+            ITool onePanelLayout = new OnePanelLayout();
+            onePanelLayout.PanelContainer = this.panelGroupContainer;
+            panelTool.AddTool(onePanelLayout);
+            this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
+            //panelTool.Image = ((Image)(resources.GetObject("paneltoolStrip.Image")));
         }
 
-        private void onePanelToolStrip_Click(object sender, EventArgs e)
-        {
-            removeAllPanel();
-            IPanel newPanel = new DefaultPanel(this, 49, 37, 660, 660, "Full Single Panel");
-            activatePanel(newPanel);
-        }
+        //private void onePanelToolStrip_Click(object sender, EventArgs e)
+        //{
+        //    removeAllPanel();
+        //    IPanel newPanel = new DefaultPanel(this, 49, 37, 660, 660, "Full Single Panel");
+        //    activatePanel(newPanel);
+        //}
 
-        private void twoPanelToolStrip_Click(object sender, EventArgs e)
-        {
-            removeAllPanel();
-            IPanel leftPanel = new DefaultPanel(this, 49, 37, 320, 320, "left double panel");
-            IPanel rightPanel = new DefaultPanel(this, 375, 37, 320, 320, "right double panel");
-            activatePanel(leftPanel);
-        }
+        //private void twoPanelToolStrip_Click(object sender, EventArgs e)
+        //{
+        //    removeAllPanel();
+        //    IPanel leftPanel = new DefaultPanel(this, 49, 37, 320, 320, "left double panel");
+        //    IPanel rightPanel = new DefaultPanel(this, 375, 37, 320, 320, "right double panel");
+        //    activatePanel(leftPanel);
+        //}
 
-        private void threePanelToolStrip_Click(object sender, EventArgs e)
-        {
-            removeAllPanel();
-            IPanel leftPanelTop = new DefaultPanel(this, 49, 37, 200, 200, "Top Left Triple Panel");
-            IPanel leftPanelBottom = new DefaultPanel(this, 49, 257, 200, 200, "Bottom Left Triple Panel");
-            IPanel rightPanel = new DefaultPanel(this, 265, 37, 420, 420, "Right Triple Panel");
-            activatePanel(leftPanelTop);
-        }
+        //private void threePanelToolStrip_Click(object sender, EventArgs e)
+        //{
+        //    removeAllPanel();
+        //    IPanel leftPanelTop = new DefaultPanel(this, 49, 37, 200, 200, "Top Left Triple Panel");
+        //    IPanel leftPanelBottom = new DefaultPanel(this, 49, 257, 200, 200, "Bottom Left Triple Panel");
+        //    IPanel rightPanel = new DefaultPanel(this, 265, 37, 420, 420, "Right Triple Panel");
+        //    activatePanel(leftPanelTop);
+        //}
 
-        private void fourPanelToolStrip_Click(object sender, EventArgs e)
-        {
-            removeAllPanel();
-            IPanel leftTopPanel = new DefaultPanel(this, 49, 37, 320, 320, "Top Left Quartet Panel");
-            IPanel rightTopPanel = new DefaultPanel(this, 375, 37, 320, 320, "Top Right Quartet Panel");
-            IPanel leftBottomPanel = new DefaultPanel(this, 47, 370, 320, 320, "Bottom Left Quartet Panel");
-            IPanel rightBottomPanel = new DefaultPanel(this, 375, 370, 320, 320, "Bottom Right Quartet Panel");
-            activatePanel(leftTopPanel);
-        }
+        //private void fourPanelToolStrip_Click(object sender, EventArgs e)
+        //{
+        //    removeAllPanel();
+        //    IPanel leftTopPanel = new DefaultPanel(this, 49, 37, 320, 320, "Top Left Quartet Panel");
+        //    IPanel rightTopPanel = new DefaultPanel(this, 375, 37, 320, 320, "Top Right Quartet Panel");
+        //    IPanel leftBottomPanel = new DefaultPanel(this, 47, 370, 320, 320, "Bottom Left Quartet Panel");
+        //    IPanel rightBottomPanel = new DefaultPanel(this, 375, 370, 320, 320, "Bottom Right Quartet Panel");
+        //    activatePanel(leftTopPanel);
+        //}
 
         private void activatePanel(IPanel panel)
         {
@@ -71,17 +80,6 @@ namespace WeeToons
             }
             panel.ChangeBorder(BorderStyle.Fixed3D);
             this.panelActive = panel;
-        }
-
-        private void removeAllPanel()
-        {
-            if(this.panelGroup != null)
-            {
-                foreach (FlowLayoutPanel panel in this.panelGroup)
-                {
-                    this.Controls.Remove(panel);
-                }
-            }
         }
 
         public void panel_Click(object sender, EventArgs e)
@@ -138,6 +136,11 @@ namespace WeeToons
                 this.activePanel.BackgroundImage = backgroundImage;
                 this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
             }
+        }
+
+        private void onePanelToolStrip_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeeToons.Interfaces
 {
-    interface IComicObject
+    public interface IComicObject
     {
         
     }
