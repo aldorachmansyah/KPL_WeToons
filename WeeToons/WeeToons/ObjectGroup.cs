@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,14 @@ namespace WeeToons
             {
                 obj.RenderOnEditingView();
             }
+        }
+        public override void SetGraphics(Graphics graphics)
+        {
+            foreach (KomikObject obj in objects)
+            {
+                obj.SetGraphics(graphics);
+            }
+            
         }
 
         public override void Translate(int x, int y, int xAmount, int yAmount)
