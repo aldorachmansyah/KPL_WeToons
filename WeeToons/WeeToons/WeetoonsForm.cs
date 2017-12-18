@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
+using WeeToons.Tools;
 using WeeToons.Tools.Background_Tools;
+using WeeToons.Tools.Bubble_Tools;
 using WeeToons.Tools.Character_Tools;
+using WeeToons.Tools.Panel_Tools;
 
 namespace WeeToons
 {
     public partial class WeeToonsForm : Form
     {
-        private List<IPanel> panels;
-        private IPanel panelActive;
         private IPanelContainer panelGroupContainer;
+        private ToolStripDropDownButton bubbleTool;
 
         public WeeToonsForm()
         {
-            panels = new List<IPanel>();
             InitializeComponent();
             InitUI();
         }
@@ -32,145 +33,73 @@ namespace WeeToons
             IToolGroup panelTool = new PanelTool();
             IToolGroup backgroundTool = new BackgroundTool();
             IToolGroup characterTool = new CharacterTool();
+            IToolGroup bubbleTool = new BubbleTool();
 
             this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
             this.topToolStrip.Items.Add((ToolStripDropDownButton)backgroundTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)characterTool);
+            this.leftToolStrip.Items.Add((ToolStripDropDownButton)bubbleTool);
             #endregion
 
             #region TOOLS
             ITool onePanelLayout = new OnePanelLayout();
+            ITool twoPanelLayout = new TwoPanelLayout();
+            ITool threePanelLayout = new ThreePanelLayout();
+            ITool fourPanelLayout = new FourPanelLayout();
             ITool parkBackground = new ParkBackground();
+            ITool beachBackground = new BeachBackground();
+            ITool classroomBackground = new ClassroomBackground();
+            ITool kitchenBackground = new KitchenBackground();
+            ITool bedroomBackground = new BedroomBackground();
             ITool studentCharacter = new StudentCharacter();
             ITool swimmerCharacter = new SwimmerCharacter();
             ITool chefCharacter = new ChefCharacter();
             ITool doctorCharacter = new DoctorCharacter();
             ITool grandfatherCharacter = new GrandfatherCharacter();
             ITool basketCharacter = new BasketCharacter();
+            ITool leftroundBubble = new LeftRoundBubble();
+            ITool leftboxBubble = new LeftBoxBubble();
+            ITool rightboxBubble = new RightBoxBubble();
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
+            twoPanelLayout.PanelContainer = this.panelGroupContainer;
+            threePanelLayout.PanelContainer = this.panelGroupContainer;
+            fourPanelLayout.PanelContainer = this.panelGroupContainer;
             parkBackground.PanelContainer = this.panelGroupContainer;
+            beachBackground.PanelContainer = this.panelGroupContainer;
+            classroomBackground.PanelContainer = this.panelGroupContainer;
+            kitchenBackground.PanelContainer = this.panelGroupContainer;
+            bedroomBackground.PanelContainer = this.panelGroupContainer;
             studentCharacter.PanelContainer = this.panelGroupContainer;
             swimmerCharacter.PanelContainer = this.panelGroupContainer;
             chefCharacter.PanelContainer = this.panelGroupContainer;
             doctorCharacter.PanelContainer = this.panelGroupContainer;
             grandfatherCharacter.PanelContainer = this.panelGroupContainer;
             basketCharacter.PanelContainer = this.panelGroupContainer;
+            leftroundBubble.PanelContainer = this.panelGroupContainer;
+            leftboxBubble.PanelContainer = this.panelGroupContainer;
+            rightboxBubble.PanelContainer = this.panelGroupContainer;
 
             panelTool.AddTool(onePanelLayout);
+            panelTool.AddTool(twoPanelLayout);
+            panelTool.AddTool(threePanelLayout);
+            panelTool.AddTool(fourPanelLayout);
             backgroundTool.AddTool(parkBackground);
+            backgroundTool.AddTool(beachBackground);
+            backgroundTool.AddTool(classroomBackground);
+            backgroundTool.AddTool(kitchenBackground);
+            backgroundTool.AddTool(bedroomBackground);
             characterTool.AddTool(studentCharacter);
             characterTool.AddTool(swimmerCharacter);
             characterTool.AddTool(chefCharacter);
             characterTool.AddTool(doctorCharacter);
             characterTool.AddTool(grandfatherCharacter);
             characterTool.AddTool(basketCharacter);
+            bubbleTool.AddTool(leftroundBubble);
+            bubbleTool.AddTool(leftboxBubble);
+            bubbleTool.AddTool(rightboxBubble);
             #endregion
         }
-
-        //private void onePanelToolStrip_Click(object sender, EventArgs e)
-        //{
-        //    removeAllPanel();
-        //    IPanel newPanel = new DefaultPanel(this, 49, 37, 660, 660, "Full Single Panel");
-        //    activatePanel(newPanel);
-        //}
-
-        //private void twoPanelToolStrip_Click(object sender, EventArgs e)
-        //{
-        //    removeAllPanel();
-        //    IPanel leftPanel = new DefaultPanel(this, 49, 37, 320, 320, "left double panel");
-        //    IPanel rightPanel = new DefaultPanel(this, 375, 37, 320, 320, "right double panel");
-        //    activatePanel(leftPanel);
-        //}
-
-        //private void threePanelToolStrip_Click(object sender, EventArgs e)
-        //{
-        //    removeAllPanel();
-        //    IPanel leftPanelTop = new DefaultPanel(this, 49, 37, 200, 200, "Top Left Triple Panel");
-        //    IPanel leftPanelBottom = new DefaultPanel(this, 49, 257, 200, 200, "Bottom Left Triple Panel");
-        //    IPanel rightPanel = new DefaultPanel(this, 265, 37, 420, 420, "Right Triple Panel");
-        //    activatePanel(leftPanelTop);
-        //}
-
-        //private void fourPanelToolStrip_Click(object sender, EventArgs e)
-        //{
-        //    removeAllPanel();
-        //    IPanel leftTopPanel = new DefaultPanel(this, 49, 37, 320, 320, "Top Left Quartet Panel");
-        //    IPanel rightTopPanel = new DefaultPanel(this, 375, 37, 320, 320, "Top Right Quartet Panel");
-        //    IPanel leftBottomPanel = new DefaultPanel(this, 47, 370, 320, 320, "Bottom Left Quartet Panel");
-        //    IPanel rightBottomPanel = new DefaultPanel(this, 375, 370, 320, 320, "Bottom Right Quartet Panel");
-        //    activatePanel(leftTopPanel);
-        //}
-
-        private void activatePanel(IPanel panel)
-        {
-            if(this.panelActive != null)
-            {
-                this.panelActive.ChangeBorder(BorderStyle.FixedSingle);
-            }
-            panel.ChangeBorder(BorderStyle.Fixed3D);
-            this.panelActive = panel;
-        }
-
-        public void panel_Click(object sender, EventArgs e)
-        {
-            IPanel panel = sender as IPanel;
-            activatePanel(panel);
-        }
-
-        private void parkBackgroundToolStrip_Click(object sender, EventArgs e)
-        {
-            if (this.activePanel != null)
-            {
-                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\park.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-        }
-
-        private void beachToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (this.activePanel != null)
-            {
-                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\beach.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-        }
-
-        private void classroomBackgroundToolStrip_Click(object sender, EventArgs e)
-        {
-            if (this.activePanel != null)
-            {
-                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\classroom.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-        }
-
-        private void bedroomBackgroundToolStrip_Click(object sender, EventArgs e)
-        {
-            if (this.activePanel != null)
-            {
-                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\bedroom.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-        }
-
-        private void kitchenBackgroundToolStrip_Click(object sender, EventArgs e)
-        {
-            if (this.activePanel != null)
-            {
-                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\kitchen.jpg");
-                this.activePanel.BackgroundImage = backgroundImage;
-                this.activePanel.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-        }
-
-        private void onePanelToolStrip_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

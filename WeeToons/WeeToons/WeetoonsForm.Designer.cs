@@ -39,7 +39,7 @@ namespace WeeToons
             this.topToolStrip.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.topToolStrip.Location = new System.Drawing.Point(0, 0);
             this.topToolStrip.Name = "topToolStrip";
-            this.topToolStrip.Size = new System.Drawing.Size(721, 25);
+            this.topToolStrip.Size = new System.Drawing.Size(784, 25);
             this.topToolStrip.TabIndex = 0;
             this.topToolStrip.Text = "toolStrip1";
             // 
@@ -50,7 +50,7 @@ namespace WeeToons
             this.leftToolStrip.Location = new System.Drawing.Point(0, 25);
             this.leftToolStrip.Name = "leftToolStrip";
             this.leftToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.leftToolStrip.Size = new System.Drawing.Size(32, 677);
+            this.leftToolStrip.Size = new System.Drawing.Size(26, 681);
             this.leftToolStrip.TabIndex = 1;
             this.leftToolStrip.Text = "toolStrip2";
             // 
@@ -58,7 +58,7 @@ namespace WeeToons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 702);
+            this.ClientSize = new System.Drawing.Size(784, 706);
             this.Controls.Add(this.leftToolStrip);
             this.Controls.Add(this.topToolStrip);
             this.Name = "WeeToonsForm";

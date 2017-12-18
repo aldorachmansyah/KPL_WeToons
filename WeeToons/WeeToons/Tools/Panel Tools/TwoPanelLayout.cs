@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
 using WeeToons.Tools.Selection_Tools;
 
-namespace WeeToons
+namespace WeeToons.Tools.Panel_Tools
 {
-    class OnePanelLayout : ToolStripMenuItem, ITool
+    class TwoPanelLayout : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
 
@@ -23,18 +27,19 @@ namespace WeeToons
             }
         }
 
-        public OnePanelLayout()
+        public TwoPanelLayout()
         {
-            this.Text = "1 Panel";
-            this.Name = "onePanelToolStrip";
+            this.Text = "2 Panel";
+            this.Name = "twoPanelToolStrip";
             this.Click += new EventHandler(this.tool_Click);
         }
 
         public void tool_Click(object sender, EventArgs e)
         {
             this.panelContainer.RemoveAllPanel();
-            this.AddPanel(10, 20, 630, 630, "Full Single Panel");
-            this.panelContainer.Text = "1 Panel";
+            this.AddPanel(10, 20, 310, 310, "Left double panel");
+            this.AddPanel(325, 20, 310, 310, "Right double panel");
+            this.panelContainer.Text = "2 Panel";
         }
 
         private void AddPanel(int xPosition, int yPosition, int width, int height, string panelName = "Unknown Panel")

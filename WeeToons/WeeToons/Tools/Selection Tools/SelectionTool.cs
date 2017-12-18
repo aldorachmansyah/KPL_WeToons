@@ -56,7 +56,6 @@ namespace WeeToons.Tools.Selection_Tools
         public void ToolMouseMove(object sender, MouseEventArgs e)
         {
             IPanel panel = this.panelContainer.ActivePanel;
-            Debug.WriteLine(panel);
             if (e.Button == MouseButtons.Left && panel != null)
             {
                 if (selectedObject != null)
@@ -65,7 +64,6 @@ namespace WeeToons.Tools.Selection_Tools
                     int yAmount = e.Y - yInitial;
                     xInitial = e.X;
                     yInitial = e.Y;
-                    Debug.Write("masul");
                     selectedObject.Translate(e.X, e.Y, xAmount, yAmount);
                 }
             }

@@ -65,12 +65,39 @@
     <Compile Include="KomikObjects\ChefProperty.cs" />
     <Compile Include="KomikObjects\DoctorProperty.cs" />
     <Compile Include="KomikObjects\GrandfatherProperty.cs" />
+    <Compile Include="KomikObjects\LeftBoxProperty.cs" />
+    <Compile Include="KomikObjects\LeftRoundProperty.cs" />
+    <Compile Include="KomikObjects\RightBoxProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
     <Compile Include="KomikObjects\SwimmerProperty.cs" />
     <Compile Include="Tools\Background Tools\BackgroundTool.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Background Tools\BeachBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Background Tools\BedroomBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Background Tools\ClassroomBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Background Tools\KitchenBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Background Tools\ParkBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Bubble Tools\BubbleTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Bubble Tools\LeftBoxBubble.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Bubble Tools\LeftRoundBubble.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Bubble Tools\RightBoxBubble.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Character Tools\BasketCharacter.cs">
@@ -91,6 +118,9 @@
     <Compile Include="Tools\Character Tools\CharacterTool.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Panel Tools\FourPanelLayout.cs">
+	  <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Character Tools\SwimmerCharacter.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -98,6 +128,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Panel Tools\PanelTool.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Panel Tools\ThreePanelLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Panel Tools\TwoPanelLayout.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Selection Tools\SelectionTool.cs" />
@@ -143,9 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Tools\Panel Tools\park.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

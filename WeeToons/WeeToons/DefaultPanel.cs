@@ -137,7 +137,6 @@ namespace WeeToons
         {
             foreach (KomikObject obj in comicObjects)
             {
-                Debug.WriteLine(obj);
                 obj.SetGraphics(e.Graphics);
                 obj.Draw();
             }
@@ -149,7 +148,6 @@ namespace WeeToons
             {
                 if (obj.Intersect(x, y))
                 {
-                    Debug.Write(obj);
                     return obj;
                 }
             }

@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
+using WeeToons.KomikObjects;
 
-namespace WeeToons.Tools.Background_Tools
+namespace WeeToons.Tools.Bubble_Tools
 {
-    class ParkBackground : ToolStripMenuItem, ITool
+    class LeftBoxBubble : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
 
@@ -26,21 +27,21 @@ namespace WeeToons.Tools.Background_Tools
             }
         }
 
-        public ParkBackground()
+        public LeftBoxBubble()
         {
-            this.Text = "Park";
-            this.Name = "parkBackgroundToolStrip";
+            this.Text = "LeftBox";
+            this.Name = "leftboxBubbleToolStrip";
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Bubble\bubble2.png");
             this.Click += new EventHandler(this.tool_Click);
-            this.Image = new Bitmap(@"..\..\..\Resources\Background\park.jpg");
         }
 
         public void tool_Click(object sender, EventArgs e)
         {
-            IPanel activePanel = this.panelContainer.ActivePanel;
-            if(activePanel != null)
+            IPanel panel = this.panelContainer.ActivePanel;
+            if (panel != null)
             {
-                Image backgroundImage = new Bitmap(@"..\..\..\Resources\Background\park.jpg");
-                activePanel.SetBackground(backgroundImage);
+                LeftBoxProperty leftbox = new LeftBoxProperty();
+                panel.AddComicObject((KomikObject)leftbox);
             }
         }
     }
