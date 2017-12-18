@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
 using WeeToons.Tools.Background_Tools;
+using WeeToons.Tools.Property_Tools;
 using WeeToons.Tools.Character_Tools;
 
 namespace WeeToons
@@ -32,16 +33,19 @@ namespace WeeToons
             IToolGroup panelTool = new PanelTool();
             IToolGroup backgroundTool = new BackgroundTool();
             IToolGroup characterTool = new CharacterTool();
+            IToolGroup propertyTool = new PropertyTool();
 
             this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
             this.topToolStrip.Items.Add((ToolStripDropDownButton)backgroundTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)characterTool);
+            this.leftToolStrip.Items.Add((ToolStripDropDownButton)propertyTool);
             #endregion
 
             #region TOOLS
             ITool onePanelLayout = new OnePanelLayout();
             ITool parkBackground = new ParkBackground();
             ITool studentCharacter = new StudentCharacter();
+
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
             parkBackground.PanelContainer = this.panelGroupContainer;

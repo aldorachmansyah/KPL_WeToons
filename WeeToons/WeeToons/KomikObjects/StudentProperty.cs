@@ -11,11 +11,11 @@ namespace WeeToons.KomikObjects
     {
         public StudentProperty()
         {
-            this.Width = 180;
-            this.Height = 260;
+            this.Width = 200;
+            this.Height = 200;
             this.X = 120;
             this.Y = 50;
-            this.PropertyPath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\"), "Resources\\Icon\\cursor.png");
+            this.PropertyPath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\"), "Resources\\Character\\student.png");
         }
     }
 }
