@@ -13,7 +13,7 @@ namespace WeeToons
         {
             this.Name = "panelToolStrip";
             this.Text = "Panel";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Background\park.jpg");
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Icon\panels.png");
         }
     }
 }

@@ -13,7 +13,9 @@ namespace WeeToons.Tools.Character_Tools
         {
             this.Name = "characterToolStrip";
             this.Text = "Character";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Icon\Character.png");
+
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Icon\character.png");
+
         }
     }
 }
