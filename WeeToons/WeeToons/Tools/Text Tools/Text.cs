@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using WeeToons.Interfaces;
 using WeeToons.KomikObjects;
 
-namespace WeeToons.Tools.Property_Tools
+namespace WeeToons.Tools.Text_Tools
 {
     class Text : ToolStripMenuItem, ITool
     {
@@ -27,7 +27,7 @@ namespace WeeToons.Tools.Property_Tools
             }
         }
 
-        public Ball()
+        public Text()
         {
             this.Text = "Ball";
             this.Name = "ballToolStrip";

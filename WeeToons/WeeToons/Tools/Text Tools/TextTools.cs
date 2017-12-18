@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Collections.Generic;
 using System.Drawing;
-using System.Windows.Forms;
-using WeeToons.Interfaces;
-using WeeToons.Tools;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace WeeToons.Tools.Text_Tools
 {
@@ -14,6 +15,7 @@ namespace WeeToons.Tools.Text_Tools
             this.Name = "textToolStrip";
             this.Text = "Text";
             this.Image = Bitmap.FromFile(@"..\..\..\Resources\Icon\text.png");
+            Debug.WriteLine("masuk");
         }
     }
 }

@@ -9,6 +9,7 @@ using WeeToons.Tools.Property_Tools;
 using WeeToons.Tools.Bubble_Tools;
 using WeeToons.Tools.Character_Tools;
 using WeeToons.Tools.Panel_Tools;
+using WeeToons.Tools.Text_Tools;
 
 namespace WeeToons
 {
@@ -36,12 +37,14 @@ namespace WeeToons
             IToolGroup characterTool = new CharacterTool();
             IToolGroup propertyTool = new PropertyTool();
             IToolGroup bubbleTool = new BubbleTool();
+            IToolGroup textTool = new TextTools();
 
             this.topToolStrip.Items.Add((ToolStripDropDownButton)panelTool);
             this.topToolStrip.Items.Add((ToolStripDropDownButton)backgroundTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)characterTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)propertyTool);
             this.leftToolStrip.Items.Add((ToolStripDropDownButton)bubbleTool);
+            this.leftToolStrip.Items.Add((ToolStripDropDownButton)textTool);
             #endregion
 
             #region TOOLS

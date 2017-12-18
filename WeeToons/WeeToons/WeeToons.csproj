@@ -67,6 +67,7 @@
     <Compile Include="KomikObjects\DogProperty.cs" />
     <Compile Include="KomikObjects\FoodStallProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
+    <Compile Include="KomikObjects\TextProperty.cs" />
     <Compile Include="KomikObjects\TreeProperty.cs" />
     <Compile Include="Tools\Property Tools\Ball.cs">
       <SubType>Component</SubType>
@@ -164,7 +165,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Tools\Selection Tools\SelectionTool.cs" />
-    <Compile Include="Tools\Text Tools\TextTools.cs" />
+    <Compile Include="Tools\Text Tools\Text.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Text Tools\TextTools.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\ToolDropdownObject.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -182,7 +188,6 @@
     <Compile Include="Property.cs" />
     <Compile Include="State.cs" />
     <Compile Include="StaticState.cs" />
-    <Compile Include="Text.cs" />
     <EmbeddedResource Include="WeetoonsForm.resx">
       <DependentUpon>WeetoonsForm.cs</DependentUpon>
     </EmbeddedResource>
