@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,12 @@ using System.Windows.Forms;
 using WeeToons.Interfaces;
 using WeeToons.KomikObjects;
 
-namespace WeeToons.Tools.Property_Tools
+namespace WeeToons.Tools.Text_Tools
 {
-    class Chair : ToolStripMenuItem, ITool
+    class Text : ToolStripMenuItem, ITool
     {
         private IPanelContainer panelContainer;
+        public string Value{get; set;}
 
         public IPanelContainer PanelContainer
         {
@@ -27,11 +29,11 @@ namespace WeeToons.Tools.Property_Tools
             }
         }
 
-        public Chair()
+        public Text()
         {
-            this.Text = "Chair";
-            this.Name = "deskToolStrip";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Property\chair.png");
+            this.Text = "Text";
+            this.Name = "textToolStrip";
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Icon\text.png");
             this.Click += new EventHandler(this.tool_Click);
         }
 
@@ -40,9 +42,14 @@ namespace WeeToons.Tools.Property_Tools
             IPanel panel = this.panelContainer.ActivePanel;
             if (panel != null)
             {
-                ChairProperty chair = new ChairProperty();
-                panel.AddComicObject((KomikObject)chair);
+                string input;
+                //text.Value = input;
+                TextProperty text = new TextProperty();
+                input = Microsoft.VisualBasic.Interaction.InputBox("Input Text", "Text Box", "", 500, 300);
+                Debug.WriteLine("masuk");
+                panel.AddComicObject((KomikObject)text);
             }
         }
     }
+
 }

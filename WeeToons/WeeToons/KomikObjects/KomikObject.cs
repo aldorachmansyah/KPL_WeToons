@@ -17,6 +17,8 @@ namespace WeeToons
         public string PropertyPath { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
+        public Font font;
+        public Brush brush;
 
 
         public KomikObject()
