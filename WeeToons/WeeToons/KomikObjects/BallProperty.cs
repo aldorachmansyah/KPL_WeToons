@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace WeeToons.KomikObjects
 {
-    class ChefProperty : KomikObject
+    class BallProperty : KomikObject
     {
-        public ChefProperty()
+        public BallProperty()
         {
-            this.Width = 200;
-            this.Height = 200;
+            this.Width = 150;
+            this.Height = 150;
             this.X = 120;
             this.Y = 50;
-            this.PropertyPath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\"), "Resources\\Character\\chef.png");
+            this.PropertyPath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\"), "Resources\\Property\\football.png");
         }
     }
 }

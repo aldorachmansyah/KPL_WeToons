@@ -61,12 +61,16 @@
     <Compile Include="Interfaces\IPanelContainer.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IToolGroup.cs" />
+    <Compile Include="KomikObjects\BallProperty.cs" />
     <Compile Include="KomikObjects\ChairProperty.cs" />
     <Compile Include="KomikObjects\DeskProperty.cs" />
     <Compile Include="KomikObjects\DogProperty.cs" />
     <Compile Include="KomikObjects\FoodStallProperty.cs" />
     <Compile Include="KomikObjects\StudentProperty.cs" />
     <Compile Include="KomikObjects\TreeProperty.cs" />
+    <Compile Include="Tools\Property Tools\Ball.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Property Tools\Chair.cs">
       <SubType>Component</SubType>
     </Compile>
