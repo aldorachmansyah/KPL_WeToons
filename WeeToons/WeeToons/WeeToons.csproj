@@ -81,6 +81,9 @@
     <Compile Include="Tools\Panel Tools\PanelTool.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Panel Tools\ThreePanelLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Panel Tools\TwoPanelLayout.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -40,16 +40,19 @@ namespace WeeToons
             #region TOOLS
             ITool onePanelLayout = new OnePanelLayout();
             ITool twoPanelLayout = new TwoPanelLayout();
+            ITool threePanelLayout = new ThreePanelLayout();
             ITool parkBackground = new ParkBackground();
             ITool studentCharacter = new StudentCharacter();
 
             onePanelLayout.PanelContainer = this.panelGroupContainer;
             twoPanelLayout.PanelContainer = this.panelGroupContainer;
+            threePanelLayout.PanelContainer = this.panelGroupContainer;
             parkBackground.PanelContainer = this.panelGroupContainer;
             studentCharacter.PanelContainer = this.panelGroupContainer;
 
             panelTool.AddTool(onePanelLayout);
             panelTool.AddTool(twoPanelLayout);
+            panelTool.AddTool(threePanelLayout);
             backgroundTool.AddTool(parkBackground);
             characterTool.AddTool(studentCharacter);
             #endregion
