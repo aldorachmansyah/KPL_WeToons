@@ -69,6 +69,9 @@
     <Compile Include="Tools\Background Tools\BeachBackground.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Tools\Background Tools\BedroomBackground.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Tools\Background Tools\ClassroomBackground.cs">
       <SubType>Component</SubType>
     </Compile>
