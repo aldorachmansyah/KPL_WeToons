@@ -64,6 +64,19 @@ namespace WeeToons
 
         }
 
+        public ICanvas TargetCanvas
+        {
+            get
+            {
+                return this.canvas;
+            }
+
+            set
+            {
+                this.canvas = value;
+            }
+        }
+
         private void Toolbox_ToolSelected(ITool tool)
         {
             if (this.editor != null)
@@ -262,7 +275,7 @@ namespace WeeToons
         private void toolStripDropDownButton5_Click(object sender, EventArgs e)
         {
             string input;
-      
+            canvas = this.editor.GetSelectedCanvas();
             Text text = new Text();
             input = Microsoft.VisualBasic.Interaction.InputBox("Input Text", "Text Box", "", 500, 300);
             text.Value = input;

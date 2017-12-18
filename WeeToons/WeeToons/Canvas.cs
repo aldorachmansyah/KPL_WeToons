@@ -12,7 +12,7 @@ namespace WeeToons
     {
 
         //  private ITool activeTool;
-        // private List<KomikObject> drawingObjects;
+        private List<KomikObject> drawingObjects;
 
         public Canvas(int xPosition, int yPosition, int width, int height)
         {
@@ -21,7 +21,7 @@ namespace WeeToons
 
         private void Init(int xPosition, int yPosition, int width, int height)
         {
-            // this.drawingObjects = new List<KomikObject>();
+            this.drawingObjects = new List<KomikObject>();
             this.DoubleBuffered = true;
             this.BackColor = Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -118,7 +118,7 @@ namespace WeeToons
 
          public void AddDrawingObject(KomikObject drawingObject)
          {
-             throw new NotImplementedException();
+            this.drawingObjects.Add(drawingObject);
          }
         /* public void DeselectAllObjects()
          {
