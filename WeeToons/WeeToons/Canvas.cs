@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace WeeToons
     class Canvas : FlowLayoutPanel ,  ICanvas
     {
 
-      //  private ITool activeTool;
+        private ITool activeTool;
         private List<KomikObject> drawingObjects;
 
         public Canvas(int xPosition, int yPosition, int width, int height)
@@ -57,14 +58,29 @@ namespace WeeToons
 
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
+            if (this.activeTool != null)
+            {
+                this.activeTool.ToolMouseMove(sender, e);
+                this.Repaint();
+            }
         }
 
         private void Canvas_MouseDown(object sender, MouseEventArgs e)
         {
+            if (this.activeTool != null)
+            {
+                this.activeTool.ToolMouseDown(sender, e);
+                this.Repaint();
+            }
         }
 
         private void Canvas_MouseUp(object sender, MouseEventArgs e)
         {
+            if (this.activeTool != null)
+            {
+                this.activeTool.ToolMouseUp(sender, e);
+                this.Repaint();
+            }
         }
 
         private void Canvas_Paint(object sender, PaintEventArgs e)
@@ -108,6 +124,7 @@ namespace WeeToons
 
         public void SetActiveTool(ITool tool)
         {
+            this.activeTool = tool;
             //throw new NotImplementedException();
         }
 
@@ -146,22 +163,37 @@ namespace WeeToons
              throw new NotImplementedException();
          }
 
-         public KomikObject GetObjectAt(int x, int y)
-         {
-             throw new NotImplementedException();
-         }
+       
 
          public void RemoveDrawingObject(KomikObject drawingObject)
          {
              throw new NotImplementedException();
          }
 
-
-
-         public KomikObject SelectObjectAt(int x, int y)
+    */
+        public KomikObject GetObjectAt(int x, int y)
+        {
+            foreach (KomikObject obj in drawingObjects)
+            {
+                if (obj.Intersect(x, y))
+                {
+                    Debug.Write(obj);
+                    return obj;
+                }
+            }
+            return null;
+        }
+        public KomikObject SelectObjectAt(int x, int y)
          {
-             throw new NotImplementedException();
-         }
+            KomikObject obj = GetObjectAt(x, y);
+            /*if (obj != null)
+            {
+                obj.Select();
+            }*/
+
+            return obj;
+        }
+        /*
 
          public void SetActiveTool(ITool tool)
          {

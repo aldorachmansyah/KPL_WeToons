@@ -54,16 +54,15 @@ namespace WeeToons
 
             if (e.Button == MouseButtons.Left && canvas != null)
             {
-                canvas.DeselectAllObjects();
-                // selectedObject = canvas.SelectObjectAt(e.X, e.Y);
-                Debug.Write("selected");
+                //canvas.DeselectAllObjects();
+                 selectedObject = canvas.SelectObjectAt(e.X, e.Y);
             }
            
         }
 
         public void ToolMouseMove(object sender, MouseEventArgs e)
         {
-            /*if (e.Button == MouseButtons.Left && canvas != null)
+            if (e.Button == MouseButtons.Left && canvas != null)
             {
                 if (selectedObject != null)
                 {
@@ -71,10 +70,10 @@ namespace WeeToons
                     int yAmount = e.Y - yInitial;
                     xInitial = e.X;
                     yInitial = e.Y;
-
+                    Debug.Write("masul");
                     selectedObject.Translate(e.X, e.Y, xAmount, yAmount);
                 }
-            }*/
+            }
         }
 
         public void ToolMouseUp(object sender, MouseEventArgs e)
