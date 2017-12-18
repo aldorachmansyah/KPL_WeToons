@@ -31,8 +31,10 @@ namespace WeeToons
 
         public override bool Intersect(int xTest, int yTest)
         {
+
             if ((xTest >= x && xTest <= x + width) && (yTest >= y && yTest <= y + height))
             {
+                Debug.Write("selected");
                 //Debug.WriteLine("Object " + ID + " is selected.");
                 return true;
             }
@@ -62,7 +64,11 @@ namespace WeeToons
 
         public override void Translate(int x, int y, int xAmount, int yAmount)
         {
-            throw new NotImplementedException();
+            this.x += xAmount;
+            this.y += yAmount;
+            Debug.Write(this.x);
+            Debug.Write(this.y);
+ 
         }
     }
 }
