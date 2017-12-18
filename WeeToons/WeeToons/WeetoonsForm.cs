@@ -16,6 +16,7 @@ namespace WeeToons
     {
         private IPanelContainer panelGroupContainer;
         private ToolStripDropDownButton bubbleTool;
+        private KomikObject selectedObject;
 
         public WeeToonsForm()
         {
@@ -130,6 +131,21 @@ namespace WeeToons
 
             #endregion
         }
-        
+
+       
+        private void expandToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void shrinkToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void expandToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
