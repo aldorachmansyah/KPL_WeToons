@@ -50,6 +50,7 @@
     <Compile Include="Canvas.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="DefaultEditor.cs">
       <SubType>Component</SubType>
     </Compile>

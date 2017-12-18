@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -180,12 +181,16 @@ namespace WeeToons
 
         private void happyBoyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Image imageBox = new Bitmap(@"..\..\..\Resources\Character\boy.png");
-            this.pictureBox1.Image = imageBox;
-           
-            pictureBox1.BackColor = Color.Transparent;
-            
-            
+            ICanvas canvas = this.editor.GetSelectedCanvas();
+            if( canvas != null)
+            {
+                Point canvaslocation = canvas.GetCanvasLocation();
+                Benda happyboy = new Benda();
+                string filePath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\"), "Resources\\Icon\\cursor.png");
+                happyboy.url = filePath;
+                canvas.AddDrawingObject(happyboy);
+                canvas.Repaint();
+            }    
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
