@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,7 @@ namespace WeeToons.Tools.Background_Tools
         {
             this.Text = "Student";
             this.Name = "studentCharacterToolStrip";
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Character\student.png");
             this.Click += new EventHandler(this.tool_Click);
         }
 

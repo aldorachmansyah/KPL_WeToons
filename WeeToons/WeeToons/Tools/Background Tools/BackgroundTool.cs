@@ -13,7 +13,7 @@ namespace WeeToons.Tools.Background_Tools
         {
             this.Name = "backgroundToolStrip";
             this.Text = "Background";
-            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Background\park.jpg");
+            this.Image = Bitmap.FromFile(@"..\..\..\Resources\Icon\backgrounds.png");
         }
     }
 }
