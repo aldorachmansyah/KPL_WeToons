@@ -13,9 +13,10 @@ namespace WeeToons.Tools.Selection_Tools
     {
         private IPanelContainer panelContainer;
 
-        private KomikObject selectedObject;
+        private static KomikObject selectedObject;
         private int xInitial;
         private int yInitial;
+
 
         public Cursor Cursor
         {
@@ -49,12 +50,14 @@ namespace WeeToons.Tools.Selection_Tools
             {
                 if (Form.ModifierKeys != Keys.Control)
                 {
-                   // Debug.Write("wow");
+                    // Debug.Write("wow");
                     panel.DeselectAllObjects();
                 }
                 selectedObject = panel.SelectObjectAt(e.X, e.Y);
+
             }
         }
+
 
 
         public void ToolMouseMove(object sender, MouseEventArgs e)
@@ -76,16 +79,25 @@ namespace WeeToons.Tools.Selection_Tools
         public void ToolMouseUp(object sender, MouseEventArgs e)
         {
 
+
         }
 
         public void ToolMouseDoubleClick(object sender, MouseEventArgs e)
         {
+            /*Text text = new Text();
+            text.Value = "Untitled";
+            selectedObject.Add(text);
+            Debug.WriteLine("selection tool double click");*/
 
         }
 
         public void ToolKeyUp(object sender, KeyEventArgs e)
         {
-
+            IPanel panel = this.panelContainer.ActivePanel;
+            if (e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show("Enter key pressed");
+            }
         }
 
         public void ToolKeyDown(object sender, KeyEventArgs e)
@@ -98,9 +110,23 @@ namespace WeeToons.Tools.Selection_Tools
 
         }
 
+
         public void tool_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        internal static void expandToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            selectedObject.Expand();
+
+
+        }
+
+        internal static void shrinkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            selectedObject.Shrink();
+
         }
     }
 }
