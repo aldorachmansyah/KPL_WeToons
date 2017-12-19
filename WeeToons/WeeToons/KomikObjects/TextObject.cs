@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,12 +26,13 @@ namespace WeeToons.KomikObjects
             this.X = 100;
             this.Y = 100;
             FontFamily fontFamily = new FontFamily("Times New Roman");
-            font = new Font(fontFamily, 12, FontStyle.Regular, GraphicsUnit.Pixel);
+            font = new Font(fontFamily, 20, FontStyle.Regular, GraphicsUnit.Pixel);
         }
 
         public override bool Intersect(int xTest, int yTest)
         {
-            if ((xTest >= X && xTest <= X + Width) && (yTest >= Y && yTest <= Y + Height))
+
+            if ((xTest >= X && xTest <= X + textSize.Width) && (yTest >= Y && yTest <= Y + textSize.Height))
             {
                 //Debug.WriteLine("Object " + ID + " is selected.");
                 return true;
@@ -46,6 +48,8 @@ namespace WeeToons.KomikObjects
         {
             GetGraphics().DrawString(Value, font, brush, new PointF(X, Y));
             textSize = GetGraphics().MeasureString(Value, font);
+            GetGraphics().DrawRectangle(new Pen(Brushes.Red, 2), new Rectangle(this.X, this.Y, (int)this.textSize.Width,(int) this.textSize.Height));
+
 
         }
         public override void RenderOnStaticView()
