@@ -60,6 +60,21 @@ namespace WeeToons
             this.X += xAmount;
             this.Y += yAmount;
         }
+
+        public virtual void Expand()
+        {
+            this.Height += 10;
+            this.Width += 10;
+        }
+
+        public virtual void Shrink()
+        {
+            this.Height -= 10;
+            this.Width -= 10;
+        }
+
+
+
         public virtual void RenderOnEditingView()
         {
             Image imageBox = Bitmap.FromFile(this.PropertyPath);
