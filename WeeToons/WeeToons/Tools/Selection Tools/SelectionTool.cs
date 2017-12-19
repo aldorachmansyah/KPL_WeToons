@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeeToons.Interfaces;
+using WeeToons.KomikObjects;
 
 namespace WeeToons.Tools.Selection_Tools
 {
@@ -54,7 +55,6 @@ namespace WeeToons.Tools.Selection_Tools
                     panel.DeselectAllObjects();
                 }
                 selectedObject = panel.SelectObjectAt(e.X, e.Y);
-
             }
         }
 

@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,4 +18,4 @@ namespace WeeToons.KomikObjects
             font = new Font(fontFamily, 12, FontStyle.Regular, GraphicsUnit.Pixel);
         }
     }
-}
+}*/

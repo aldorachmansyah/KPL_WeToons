@@ -42,7 +42,7 @@ namespace WeeToons.Tools.Text_Tools
             if (panel != null)
             {
                 string input;
-                TextProperty text = new TextProperty();
+                TextObject text = new TextObject();
                 input = Microsoft.VisualBasic.Interaction.InputBox("Input Text", "Text Box", "", 500, 300);
                 text.Value = input;
                 Debug.WriteLine("masuk");

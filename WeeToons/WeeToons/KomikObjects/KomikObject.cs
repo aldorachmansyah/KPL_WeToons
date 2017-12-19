@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeeToons.KomikObjects;
 
 namespace WeeToons
 {
@@ -74,7 +75,6 @@ namespace WeeToons
         }
 
 
-
         public virtual void RenderOnEditingView()
         {
             Image imageBox = Bitmap.FromFile(this.PropertyPath);
@@ -84,9 +84,18 @@ namespace WeeToons
         }
         public virtual void RenderOnStaticView()
         {
-            Image imageBox = Bitmap.FromFile(this.PropertyPath);
-            string value;
-            GetGraphics().DrawImage(imageBox, this.X, this.Y, this.Width, this.Height);
+                Image imageBox = Bitmap.FromFile(this.PropertyPath);
+                GetGraphics().DrawImage(imageBox, this.X, this.Y, this.Width, this.Height);
+        }
+
+        public virtual void RenderStaticText()
+        {
+
+        }
+
+        public virtual void RenderEditText()
+        {
+
         }
 
 

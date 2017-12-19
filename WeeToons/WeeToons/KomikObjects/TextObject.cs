@@ -7,31 +7,25 @@ using System.Threading.Tasks;
 
 namespace WeeToons.KomikObjects
 {
-    public abstract class TextObject : KomikObject
+    public class TextObject : KomikObject
     {
-        private Graphics graphics;
         private SizeF textSize;
-
-        public string Value { get; set; }
         public int X { get; set; }
-        public int Y { get; set; }
-        public string PropertyPath { get; set; }
+        public int Y{ get; set; }
+        public string Value { get; set; }
+
+       /* public TextProperty()
+        {
+
+        }*/
 
         public TextObject()
         {
-            this.ChangeState(StaticState.GetInstance());
-        }
-
-        private State state;
-
-        public override void Select()
-        {
-            this.state.Select(this);
-        }
-
-        public override void Deselect()
-        {
-            this.state.Deselect(this);
+            this.brush = new SolidBrush(Color.Black);
+            this.X = 100;
+            this.Y = 100;
+            FontFamily fontFamily = new FontFamily("Times New Roman");
+            font = new Font(fontFamily, 12, FontStyle.Regular, GraphicsUnit.Pixel);
         }
 
         public override bool Intersect(int xTest, int yTest)
@@ -58,25 +52,6 @@ namespace WeeToons.KomikObjects
         {
             GetGraphics().DrawString(Value, font, brush, new PointF(X, Y));
             textSize = GetGraphics().MeasureString(Value, font);
-        }
-
-        public override void Draw()
-        {
-            this.state.Draw(this);
-        }
-        public override void SetGraphics(Graphics graphics)
-        {
-            this.graphics = graphics;
-        }
-
-        public override Graphics GetGraphics()
-        {
-            return this.graphics;
-        }
-
-        public void ChangeState(State state)
-        {
-            this.state = state;
         }
     }
 }
