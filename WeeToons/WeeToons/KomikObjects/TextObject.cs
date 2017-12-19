@@ -50,9 +50,8 @@ namespace WeeToons.KomikObjects
         }
         public override void RenderOnEditingView()
         {
-            Image imageBox = Bitmap.FromFile(this.PropertyPath);
-            GetGraphics().DrawImage(imageBox, this.X, this.Y, this.Width, this.Height);
-            GetGraphics().DrawRectangle(new Pen(Brushes.Red, 5), new Rectangle(this.X, this.Y, this.Width, this.Height));
+            GetGraphics().DrawString(Value, font, brush, new PointF(X, Y));
+            textSize = GetGraphics().MeasureString(Value, font);
 
         }
         public override void RenderOnStaticView()
@@ -79,8 +78,5 @@ namespace WeeToons.KomikObjects
         {
             this.state = state;
         }
-
-        public abstract void SetText(string value);
-        public abstract string GetText();
     }
 }

@@ -49,6 +49,8 @@ namespace WeeToons.Tools.Text_Tools
                 panel.AddComicObject((KomikObject)text);
             }
         }
+
+
     }
 
 }

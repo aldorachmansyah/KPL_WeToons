@@ -8,23 +8,14 @@ using System.Drawing;
 namespace WeeToons.KomikObjects
 {
     class TextProperty : TextObject
-    {
+    { 
         public TextProperty()
         {
             this.brush = new SolidBrush(Color.Black);
-
-            FontFamily fontFamily = new FontFamily("Arial");
-            font = new Font(fontFamily, 16, FontStyle.Regular, GraphicsUnit.Pixel);
-        }
-
-        public override string GetText()
-        {
-            return Value;
-        }
-
-        public override void SetText(string value)
-        {
-            this.Value = value;
+            this.X = 100;
+            this.Y = 100;
+            FontFamily fontFamily = new FontFamily("Times New Roman");
+            font = new Font(fontFamily, 12, FontStyle.Regular, GraphicsUnit.Pixel);
         }
     }
 }

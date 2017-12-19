@@ -80,10 +80,7 @@ namespace WeeToons.Tools.Selection_Tools
 
         public void ToolMouseDoubleClick(object sender, MouseEventArgs e)
         {
-            /*Text text = new Text();
-            text.Value = "Untitled";
-            selectedObject.Add(text);
-            Debug.WriteLine("selection tool double click");*/
+
         }
 
         public void ToolKeyUp(object sender, KeyEventArgs e)
